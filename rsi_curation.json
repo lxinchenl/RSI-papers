@@ -1,9 +1,9 @@
 {
   "date": "2026-11-05",
-  "scope": "排除综述/路线图及分子、医疗、交易、推荐、具身、视听、可视化等垂类应用；保留通用 Agent/Harness、代码与模型研发方法。通用方法不因某项实验使用垂类数据而排除。",
+  "scope": "排除综述/路线图、专门垂类应用、benchmark 及单纯比较/实证分析。保留提出通用 Agent/Harness、代码与模型研发方法的论文；方法论文不因使用多个 benchmark 做实验而排除。理论论文若提出新判定方法并实际检验可保留。",
   "before_total": 124,
-  "removed_total": 18,
-  "after_total": 106,
+  "removed_total": 29,
+  "after_total": 95,
   "excluded": [
     {
       "id": "2610.40191",
@@ -148,18 +148,156 @@
       "original_number": 65,
       "category": "垂类应用",
       "reason": "推荐系统与用户交互数据"
+    },
+    {
+      "id": "2610.33956",
+      "title": "Continual Learning Exam: Benchmarking Long-Horizon RSI and Experiential Learning in LLM Agents",
+      "group": "核心",
+      "original_number": 2,
+      "category": "基准评测",
+      "reason": "CLE 的主要贡献是持续学习评测协议与数据集",
+      "source": "https://arxiv.org/html/2610.33956#S3",
+      "phase": "正文复核与排除基准/比较论文"
+    },
+    {
+      "id": "2610.34386",
+      "title": "ParetoRSI-Gym: Can AI Agents Improve Language Models Across Multiple Domains?",
+      "group": "核心",
+      "original_number": 1,
+      "category": "基准评测",
+      "reason": "ParetoRSI-Gym 是多领域自主数据策展与后训练的评测环境",
+      "source": "https://arxiv.org/html/2610.34386#S2",
+      "phase": "正文复核与排除基准/比较论文"
+    },
+    {
+      "id": "2610.26342",
+      "title": "VibeTraining-Bench: Data-Trainer-Harness Co-Design for Iterative System Improvement",
+      "group": "核心",
+      "original_number": 7,
+      "category": "基准评测",
+      "reason": "VibeTraining-Bench 评估数据、训练器与 Harness 协同设计能力",
+      "source": "https://arxiv.org/html/2610.26342#S3",
+      "phase": "正文复核与排除基准/比较论文"
+    },
+    {
+      "id": "2609.35025",
+      "title": "AutoDataBench: Can Agents Write the Data That Feeds the Self-Improvement Loop?",
+      "group": "核心",
+      "original_number": 30,
+      "category": "基准评测",
+      "reason": "AutoDataBench 逐个评估训练任务的生成质量，不提出新的系统进化方法",
+      "source": "https://arxiv.org/html/2609.35025#S2",
+      "phase": "正文复核与排除基准/比较论文"
+    },
+    {
+      "id": "2606.04455",
+      "title": "The Meta-Agent Challenge: Are Current Agents Capable of Autonomous Agent Development?",
+      "group": "核心",
+      "original_number": 47,
+      "category": "基准评测",
+      "reason": "Meta-Agent Challenge 是自主 Agent 开发能力基准；被开发 Agent 可更新，但本文按基准论文排除",
+      "source": "https://arxiv.org/html/2606.04455#S3",
+      "phase": "正文复核与排除基准/比较论文"
+    },
+    {
+      "id": "2608.31111",
+      "title": "Aspire: Can Models Self-Evolve from Vague Goals?",
+      "group": "拓展",
+      "original_number": 25,
+      "category": "基准评测",
+      "reason": "ASPIRE 评估模糊目标下的权重和 Harness 更新；实验中的确有更新，但主要贡献是基准",
+      "source": "https://arxiv.org/html/2608.31111#S3",
+      "phase": "正文复核与排除基准/比较论文"
+    },
+    {
+      "id": "2610.33624",
+      "title": "RSI Arena: Towards Recursive Self-Improvement with Human Feedback",
+      "group": "核心",
+      "original_number": 3,
+      "category": "比较/实证分析",
+      "reason": "RSI Arena 提供统一后训练竞赛与人类偏好比较研究，不是独立的新进化算法",
+      "source": "https://arxiv.org/html/2610.33624#S2",
+      "phase": "正文复核与排除基准/比较论文"
+    },
+    {
+      "id": "2610.25858",
+      "title": "Are Self-Evolving Agents Continual Learners?",
+      "group": "拓展",
+      "original_number": 4,
+      "category": "比较/实证分析",
+      "reason": "比较 ReasoningBank、GEPA、Meta-Harness 的遗忘与迁移",
+      "source": "https://arxiv.org/html/2610.25858#S4.SS1",
+      "phase": "正文复核与排除基准/比较论文"
+    },
+    {
+      "id": "2605.30621",
+      "title": "Harness Updating Is Not Harness Benefit: Disentangling Evolution Capabilities in Self-Evolving LLM Agents",
+      "group": "拓展",
+      "original_number": 44,
+      "category": "比较/实证分析",
+      "reason": "拆分并比较不同模型的 Harness 更新能力与收益能力",
+      "source": "https://arxiv.org/html/2605.30621#S3",
+      "phase": "正文复核与排除基准/比较论文"
+    },
+    {
+      "id": "2610.01073",
+      "title": "Safety Must Survive Self-Improvement: Why Failures Persist and How Agents Recover",
+      "group": "核心",
+      "original_number": 23,
+      "category": "比较/实证分析",
+      "reason": "通过受控干预分析安全故障的持续与恢复，主要贡献是机制分析",
+      "source": "https://arxiv.org/html/2610.01073#S3",
+      "phase": "正文复核与排除基准/比较论文"
+    },
+    {
+      "id": "2610.18813",
+      "title": "Self-Evolving Agent Harness",
+      "group": "核心",
+      "original_number": 13,
+      "category": "综述/路线图",
+      "reason": "正文以 Harness 自进化的定义、分类、条件性理论与既有系统案例为主",
+      "source": "https://arxiv.org/html/2610.18813#S1",
+      "phase": "正文复核与排除基准/比较论文"
     }
   ],
   "spotlight_ids": [
-    "2607.05297",
-    "2606.26294",
-    "2609.33398",
-    "2609.24972",
     "2603.19461",
+    "2607.05297",
     "2610.02616",
     "2610.13025",
+    "2606.26294",
+    "2610.14118",
+    "2607.27360",
+    "2604.01687",
     "2606.17628",
-    "2605.06614"
+    "2605.06614",
+    "2610.14224",
+    "2609.37834",
+    "2609.14858",
+    "2609.33398",
+    "2605.14392",
+    "2609.29626",
+    "2609.24972",
+    "2609.36043",
+    "2607.24300",
+    "2609.39102"
   ],
-  "backup": "rsi_outputs/before_prune_20261105"
+  "backup": "rsi_outputs/before_prune_20261105",
+  "phases": [
+    {
+      "name": "综述与垂类清理",
+      "before": 124,
+      "removed": 18,
+      "after": 106
+    },
+    {
+      "name": "正文复核与排除基准/比较论文",
+      "before": 106,
+      "removed": 11,
+      "after": 95
+    }
+  ],
+  "spotlight_limit": 20,
+  "spotlight_limit_basis": "用户明确以最多20篇替代原来的10%限制。",
+  "latest_backup": "rsi_outputs/before_component_review_20261105"
 }

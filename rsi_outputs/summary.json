@@ -1,39 +1,36 @@
 {
-  "total": 106,
-  "unique_ids": 106,
+  "total": 95,
+  "unique_ids": 95,
   "groups": {
-    "核心": 47,
-    "拓展": 59
+    "核心": 39,
+    "拓展": 56
   },
-  "tagged": 95,
-  "method_levels": 94,
-  "semantic_changes": 21,
-  "body_review": 24,
+  "tagged": 93,
+  "method_levels": 91,
+  "semantic_changes": 24,
+  "body_review": 26,
   "module_counts": {
-    "Executor": 92,
+    "Executor": 90,
     "Evaluator": 26,
-    "Improver": 38
+    "Improver": 36
   },
   "tag_counts": {
-    "Executor/Harness/整体 Harness": 36,
+    "Executor/Harness/整体 Harness": 35,
     "Executor/Harness/Prompt": 7,
     "Executor/Harness/Skill": 23,
-    "Executor/Harness/Memory": 8,
+    "Executor/Harness/Memory": 9,
     "Executor/Harness/Workflow": 8,
-    "Executor/Model/Weights": 36,
+    "Executor/Model/Weights": 33,
     "Executor/Model/模型结构": 0,
     "Evaluator/测试任务": 5,
     "Evaluator/测试标准": 23,
-    "Improver/提出策略": 37,
-    "Improver/筛选策略": 7
+    "Improver/提出策略": 35,
+    "Improver/筛选策略": 6
   },
   "levels": {
-    "L2": 49,
-    "未归类": 7,
-    "L1": 45,
-    "不适用（比较研究）": 2,
-    "不适用（理论研究）": 1,
-    "不适用（基准论文）": 1,
-    "相邻研究（非完整 RSI）": 1
+    "L1": 44,
+    "L2": 47,
+    "相邻研究（非完整 RSI）": 3,
+    "不适用（理论研究）": 1
   }
 }
