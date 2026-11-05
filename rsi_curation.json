@@ -1,0 +1,165 @@
+{
+  "date": "2026-11-05",
+  "scope": "排除综述/路线图及分子、医疗、交易、推荐、具身、视听、可视化等垂类应用；保留通用 Agent/Harness、代码与模型研发方法。通用方法不因某项实验使用垂类数据而排除。",
+  "before_total": 124,
+  "removed_total": 18,
+  "after_total": 106,
+  "excluded": [
+    {
+      "id": "2610.40191",
+      "title": "Video Generation Meets Agent Harness: Agentic Video Generation, Agentic World Modeling and Recursive Self-Improvement",
+      "group": "核心",
+      "original_number": 1,
+      "category": "综述/路线图",
+      "reason": "视频生成、世界建模与 RSI 的综述报告"
+    },
+    {
+      "id": "2610.38266",
+      "title": "Recursive Self-Improvement in Physical AI: Mechanisms, Evidence, and Evaluation",
+      "group": "核心",
+      "original_number": 3,
+      "category": "综述/路线图",
+      "reason": "Physical AI 与具身 RSI 综述"
+    },
+    {
+      "id": "2610.35193",
+      "title": "Trustworthy Recursive Self-Improvement in the Era of Large Models: Foundation, Risks, Evaluation and Open Challenges",
+      "group": "核心",
+      "original_number": 5,
+      "category": "综述/路线图",
+      "reason": "可信 RSI 的基础、风险和评价综述"
+    },
+    {
+      "id": "2610.18842",
+      "title": "Who Improves the Robot? Toward Physical Recursive Self-Improvement",
+      "group": "核心",
+      "original_number": 19,
+      "category": "综述/路线图",
+      "reason": "机器人 Physical RSI 的观点、分级与研究路线"
+    },
+    {
+      "id": "2609.31186",
+      "title": "Evolutionary Safety of Recursive Self-Improving AI: Taxonomy, Risk Discovery, and Evaluation",
+      "group": "核心",
+      "original_number": 46,
+      "category": "综述/路线图",
+      "reason": "演化安全的分类、风险分析与评价框架，非具体进化方法"
+    },
+    {
+      "id": "2609.11873",
+      "title": "The Last AI Built by Humans: Toward Genuine Recursive Self-Improvement",
+      "group": "核心",
+      "original_number": 52,
+      "category": "综述/路线图",
+      "reason": "RSI 发展路线图与行业实践讨论"
+    },
+    {
+      "id": "2610.39714",
+      "title": "MolRSI: A Recursive Self-Improving AI agent for Molecular Discovery",
+      "group": "核心",
+      "original_number": 2,
+      "category": "垂类应用",
+      "reason": "分子发现、抗生素筛选与肽设计"
+    },
+    {
+      "id": "2610.35316",
+      "title": "RSIV-Harness: A Recursive Self-Improvement Harness Framework for Open-Domain Conversational Text-to-Visualization",
+      "group": "核心",
+      "original_number": 4,
+      "category": "垂类应用",
+      "reason": "对话式文本到可视化的专门应用"
+    },
+    {
+      "id": "2610.20474",
+      "title": "AdaRSI: On-Demand Recursive Self-Improvement for Embodied Agents",
+      "group": "核心",
+      "original_number": 17,
+      "category": "垂类应用",
+      "reason": "机器人与具身 VLA 任务"
+    },
+    {
+      "id": "2610.18688",
+      "title": "RSIgen: Reciprocal Self-Improvement for Agentic Visual Generation",
+      "group": "核心",
+      "original_number": 21,
+      "category": "垂类应用",
+      "reason": "图像与视觉生成的专门应用"
+    },
+    {
+      "id": "2610.11299",
+      "title": "DuplexAgent-RSI: Recursive Harness Improvement for Full-Duplex Voice Agent Collaboration",
+      "group": "核心",
+      "original_number": 30,
+      "category": "垂类应用",
+      "reason": "全双工语音协作系统"
+    },
+    {
+      "id": "2609.38721",
+      "title": "UniEvo-VL: An On-policy Self-Distillation Training Recipe for Multimodal Model Self-improvement",
+      "group": "核心",
+      "original_number": 34,
+      "category": "垂类应用",
+      "reason": "多模态图像生成的自蒸馏训练"
+    },
+    {
+      "id": "2609.37950",
+      "title": "Video-RSI: Recursive Self-Improvement of Video Understanding Agents via Harness Evolution",
+      "group": "核心",
+      "original_number": 37,
+      "category": "垂类应用",
+      "reason": "视频理解智能体"
+    },
+    {
+      "id": "2609.24838",
+      "title": "MedRSI: Recursive Self-Improvement for Medical Agents via Clinically Aligned Self-Evolution",
+      "group": "核心",
+      "original_number": 48,
+      "category": "垂类应用",
+      "reason": "临床诊断与医疗工具演化"
+    },
+    {
+      "id": "2608.16211",
+      "title": "BaT: Towards Self-Evolving Medical Research Agent with Stage Rubrics",
+      "group": "核心",
+      "original_number": 57,
+      "category": "垂类应用",
+      "reason": "医学影像研究工作流与后训练"
+    },
+    {
+      "id": "2608.12841",
+      "title": "AQuA: Recursively Self-Improving Quantitative Trading Research Agents",
+      "group": "核心",
+      "original_number": 59,
+      "category": "垂类应用",
+      "reason": "量化交易因子与交易模型研发"
+    },
+    {
+      "id": "2607.28251",
+      "title": "Policy-Level Recursive Self-Improvement for Embodied AI with a Criticality World Model",
+      "group": "核心",
+      "original_number": 60,
+      "category": "垂类应用",
+      "reason": "具身运动与操作策略"
+    },
+    {
+      "id": "2602.15659",
+      "title": "Can Recommender Systems Teach Themselves? A Recursive Self-Improving Framework with Fidelity Control",
+      "group": "核心",
+      "original_number": 65,
+      "category": "垂类应用",
+      "reason": "推荐系统与用户交互数据"
+    }
+  ],
+  "spotlight_ids": [
+    "2607.05297",
+    "2606.26294",
+    "2609.33398",
+    "2609.24972",
+    "2603.19461",
+    "2610.02616",
+    "2610.13025",
+    "2606.17628",
+    "2605.06614"
+  ],
+  "backup": "rsi_outputs/before_prune_20261105"
+}

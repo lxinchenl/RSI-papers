@@ -1,130 +1,11 @@
 {
   "date": "2026-11-05",
-  "count": 124,
+  "count": 106,
   "papers": [
     {
       "file": "2026RSI核心.md",
       "group": "核心",
       "number": 1,
-      "title": "Video Generation Meets Agent Harness: Agentic Video Generation, Agentic World Modeling and Recursive Self-Improvement",
-      "id": "2610.40191",
-      "level": "未归类",
-      "tags": [],
-      "reason": "综述/方向讨论；摘要未展示具体系统的组件进化。",
-      "status": "本轮按本地摘要复核；不适用或不足以确认进化组件",
-      "source": "",
-      "review_note": "沿用本地摘要及既有依据，统一功能角色与标签层级。",
-      "review_scope": "本地摘要与既有依据",
-      "before": {
-        "level": "未归类",
-        "tags": [
-          "无可确认的组件标签"
-        ],
-        "reason": "综述/方向讨论；摘要未展示具体系统的组件进化。",
-        "status": "摘要证据不足或不适用"
-      },
-      "semantic_change": false
-    },
-    {
-      "file": "2026RSI核心.md",
-      "group": "核心",
-      "number": 2,
-      "title": "MolRSI: A Recursive Self-Improving AI agent for Molecular Discovery ⭐ Spotlight",
-      "id": "2610.39714",
-      "level": "L1",
-      "tags": [
-        "Executor/Harness/Workflow"
-      ],
-      "reason": "分子发现工作流跨轮优化，包含领域预测器的选择、拟合与组合。这里按 Agent 的目标执行策略口径标 Workflow；论文中的领域预测器 architecture 不直接当成 LLM 执行骨干的结构自修改。固定 MCTS 公式读取累计经验与成绩，没有充分证据支持搜索选择规则本身被改写，保留 L1。",
-      "status": "按正文相关段落复核（本对话）；本轮按统一功能分类重标",
-      "source": "https://arxiv.org/html/2610.39714#S4.SS1",
-      "review_note": "明确模型结构统计的 Agent 范围；领域预测器选型不直接推断为 Agent 模型结构进化。",
-      "review_scope": "正文相关段落（本对话）",
-      "before": {
-        "level": "L1",
-        "tags": [
-          "Executor/Harness/Workflow"
-        ],
-        "reason": "分子发现工作流迭代更新。固定的 MCTS 搜索规则读取不断积累的实验记录，形成论文所称的“有效搜索策略”变化；但没有独立的改进策略文件、代码或参数被改写。文中的模型结构属于工作流内的预测模型，智能体 LLM 骨干固定。",
-        "status": "根据论文正文核查"
-      },
-      "semantic_change": false
-    },
-    {
-      "file": "2026RSI核心.md",
-      "group": "核心",
-      "number": 3,
-      "title": "Recursive Self-Improvement in Physical AI: Mechanisms, Evidence, and Evaluation",
-      "id": "2610.38266",
-      "level": "未归类",
-      "tags": [],
-      "reason": "综述；比较多种可能的更新对象，未展示单一系统进化。",
-      "status": "本轮按本地摘要复核；不适用或不足以确认进化组件",
-      "source": "",
-      "review_note": "沿用本地摘要及既有依据，统一功能角色与标签层级。",
-      "review_scope": "本地摘要与既有依据",
-      "before": {
-        "level": "未归类",
-        "tags": [
-          "无可确认的组件标签"
-        ],
-        "reason": "综述；比较多种可能的更新对象，未展示单一系统进化。",
-        "status": "摘要证据不足或不适用"
-      },
-      "semantic_change": false
-    },
-    {
-      "file": "2026RSI核心.md",
-      "group": "核心",
-      "number": 4,
-      "title": "RSIV-Harness: A Recursive Self-Improvement Harness Framework for Open-Domain Conversational Text-to-Visualization",
-      "id": "2610.35316",
-      "level": "L1",
-      "tags": [
-        "Executor/Harness/整体 Harness"
-      ],
-      "reason": "从失败轨迹修订执行 Harness；摘要未限定到其某个子部件。",
-      "status": "本轮按本地摘要与既有分类依据复核",
-      "source": "",
-      "review_note": "沿用本地摘要及既有依据，统一功能角色与标签层级。",
-      "review_scope": "本地摘要与既有依据",
-      "before": {
-        "level": "L1",
-        "tags": [
-          "Executor/Harness/整体 Harness"
-        ],
-        "reason": "从失败轨迹修订执行 Harness；摘要未限定到其某个子部件。",
-        "status": "根据摘要判定"
-      },
-      "semantic_change": false
-    },
-    {
-      "file": "2026RSI核心.md",
-      "group": "核心",
-      "number": 5,
-      "title": "Trustworthy Recursive Self-Improvement in the Era of Large Models: Foundation, Risks, Evaluation and Open Challenges",
-      "id": "2610.35193",
-      "level": "未归类",
-      "tags": [],
-      "reason": "可信 RSI 综述；描述风险与框架，不代表文中系统修改这些组件。",
-      "status": "本轮按本地摘要复核；不适用或不足以确认进化组件",
-      "source": "",
-      "review_note": "沿用本地摘要及既有依据，统一功能角色与标签层级。",
-      "review_scope": "本地摘要与既有依据",
-      "before": {
-        "level": "未归类",
-        "tags": [
-          "无可确认的组件标签"
-        ],
-        "reason": "可信 RSI 综述；描述风险与框架，不代表文中系统修改这些组件。",
-        "status": "摘要证据不足或不适用"
-      },
-      "semantic_change": false
-    },
-    {
-      "file": "2026RSI核心.md",
-      "group": "核心",
-      "number": 6,
       "title": "ParetoRSI-Gym: Can AI Agents Improve Language Models Across Multiple Domains?",
       "id": "2610.34386",
       "level": "L2",
@@ -151,7 +32,7 @@
     {
       "file": "2026RSI核心.md",
       "group": "核心",
-      "number": 7,
+      "number": 2,
       "title": "Continual Learning Exam: Benchmarking Long-Horizon RSI and Experiential Learning in LLM Agents",
       "id": "2610.33956",
       "level": "未归类",
@@ -174,7 +55,7 @@
     {
       "file": "2026RSI核心.md",
       "group": "核心",
-      "number": 8,
+      "number": 3,
       "title": "RSI Arena: Towards Recursive Self-Improvement with Human Feedback",
       "id": "2610.33624",
       "level": "L1",
@@ -199,7 +80,7 @@
     {
       "file": "2026RSI核心.md",
       "group": "核心",
-      "number": 9,
+      "number": 4,
       "title": "HarnessMM: Recursive Self-Improvement for Harness Token Efficiency",
       "id": "2610.32813",
       "level": "L1",
@@ -226,7 +107,7 @@
     {
       "file": "2026RSI核心.md",
       "group": "核心",
-      "number": 10,
+      "number": 5,
       "title": "RSIHub: A Composable Framework for Agent-Evolution Methods",
       "id": "2610.32253",
       "level": "L2",
@@ -257,7 +138,7 @@
     {
       "file": "2026RSI核心.md",
       "group": "核心",
-      "number": 11,
+      "number": 6,
       "title": "HarnessPro: Recursive Harness Self-Improvement with Pareto Optimization for Performance-Cost Trade-offs",
       "id": "2610.26770",
       "level": "L1",
@@ -282,7 +163,7 @@
     {
       "file": "2026RSI核心.md",
       "group": "核心",
-      "number": 12,
+      "number": 7,
       "title": "VibeTraining-Bench: Data-Trainer-Harness Co-Design for Iterative System Improvement",
       "id": "2610.26342",
       "level": "L2",
@@ -311,7 +192,7 @@
     {
       "file": "2026RSI核心.md",
       "group": "核心",
-      "number": 13,
+      "number": 8,
       "title": "CoEvo-RSI: When Harnesses Evolve, Which Models Should Follow?",
       "id": "2610.25078",
       "level": "L1",
@@ -338,7 +219,7 @@
     {
       "file": "2026RSI核心.md",
       "group": "核心",
-      "number": 14,
+      "number": 9,
       "title": "R$^2$Orch: Recursive Self-Improvement for Agent Orchestration via Self-Play within a Skill-Internalization Loop",
       "id": "2610.22740",
       "level": "L2",
@@ -367,7 +248,7 @@
     {
       "file": "2026RSI核心.md",
       "group": "核心",
-      "number": 15,
+      "number": 10,
       "title": "Terminal-RSI: Recursive Self-Improving Terminal Agents via Recursive Self-Rewrite and Policy-Refine",
       "id": "2610.22192",
       "level": "L1",
@@ -392,7 +273,7 @@
     {
       "file": "2026RSI核心.md",
       "group": "核心",
-      "number": 16,
+      "number": 11,
       "title": "Athanor: An Agent-Native System for Autonomous Post-Training Research",
       "id": "2610.21055",
       "level": "L2",
@@ -419,36 +300,7 @@
     {
       "file": "2026RSI核心.md",
       "group": "核心",
-      "number": 17,
-      "title": "AdaRSI: On-Demand Recursive Self-Improvement for Embodied Agents",
-      "id": "2610.20474",
-      "level": "L1",
-      "tags": [
-        "Executor/Harness/整体 Harness",
-        "Executor/Harness/Skill",
-        "Executor/Model/Weights"
-      ],
-      "reason": "先改执行 Skill/Harness，再针对持续失败步骤微调 VLA 权重。",
-      "status": "本轮按本地摘要与既有分类依据复核",
-      "source": "",
-      "review_note": "沿用本地摘要及既有依据，统一功能角色与标签层级。",
-      "review_scope": "本地摘要与既有依据",
-      "before": {
-        "level": "L1",
-        "tags": [
-          "Executor/Harness/整体 Harness",
-          "Executor/Harness/Skill",
-          "Executor/Model/权重"
-        ],
-        "reason": "先改执行 Skill/Harness，再针对持续失败步骤微调 VLA 权重。",
-        "status": "根据摘要判定"
-      },
-      "semantic_change": false
-    },
-    {
-      "file": "2026RSI核心.md",
-      "group": "核心",
-      "number": 18,
+      "number": 12,
       "title": "SwarmRSI: Recursive Self-Improvement through Evolving Scientific Agent Swarm",
       "id": "2610.20431",
       "level": "未归类",
@@ -471,30 +323,7 @@
     {
       "file": "2026RSI核心.md",
       "group": "核心",
-      "number": 19,
-      "title": "Who Improves the Robot? Toward Physical Recursive Self-Improvement",
-      "id": "2610.18842",
-      "level": "未归类",
-      "tags": [],
-      "reason": "物理 RSI 框架与文献分析；摘要明确指出所定义的物理 RSI 尚无演示。",
-      "status": "本轮按本地摘要复核；不适用或不足以确认进化组件",
-      "source": "",
-      "review_note": "沿用本地摘要及既有依据，统一功能角色与标签层级。",
-      "review_scope": "本地摘要与既有依据",
-      "before": {
-        "level": "未归类",
-        "tags": [
-          "无可确认的组件标签"
-        ],
-        "reason": "物理 RSI 框架与文献分析；摘要明确指出所定义的物理 RSI 尚无演示。",
-        "status": "摘要证据不足或不适用"
-      },
-      "semantic_change": false
-    },
-    {
-      "file": "2026RSI核心.md",
-      "group": "核心",
-      "number": 20,
+      "number": 13,
       "title": "Self-Evolving Agent Harness",
       "id": "2610.18813",
       "level": "未归类",
@@ -517,32 +346,7 @@
     {
       "file": "2026RSI核心.md",
       "group": "核心",
-      "number": 21,
-      "title": "RSIgen: Reciprocal Self-Improvement for Agentic Visual Generation",
-      "id": "2610.18688",
-      "level": "L1",
-      "tags": [
-        "Executor/Model/Weights"
-      ],
-      "reason": "生成与理解角色的学习更新发生在统一多模态模型内。",
-      "status": "本轮按本地摘要与既有分类依据复核",
-      "source": "",
-      "review_note": "沿用本地摘要及既有依据，统一功能角色与标签层级。",
-      "review_scope": "本地摘要与既有依据",
-      "before": {
-        "level": "L1",
-        "tags": [
-          "Executor/Model/权重"
-        ],
-        "reason": "生成与理解角色的学习更新发生在统一多模态模型内。",
-        "status": "根据摘要判定"
-      },
-      "semantic_change": false
-    },
-    {
-      "file": "2026RSI核心.md",
-      "group": "核心",
-      "number": 22,
+      "number": 14,
       "title": "AReaL-RSI: Adaptive Scaling and Coordination of Recursive Self-Improvement",
       "id": "2610.18083",
       "level": "L2",
@@ -573,7 +377,7 @@
     {
       "file": "2026RSI核心.md",
       "group": "核心",
-      "number": 23,
+      "number": 15,
       "title": "Drafting Agents, Not Just Tokens: Speculative Recursive Self-Improvement for Agentic Systems",
       "id": "2610.16491",
       "level": "L2",
@@ -601,7 +405,7 @@
     {
       "file": "2026RSI核心.md",
       "group": "核心",
-      "number": 24,
+      "number": 16,
       "title": "Harness^2: Recursive Agent Harnessing for an Open World",
       "id": "2610.14224",
       "level": "L2",
@@ -628,7 +432,7 @@
     {
       "file": "2026RSI核心.md",
       "group": "核心",
-      "number": 25,
+      "number": 17,
       "title": "AutoEnvScaling: Automating the Data Flywheel with Terminal Agents",
       "id": "2610.14163",
       "level": "L2",
@@ -655,7 +459,7 @@
     {
       "file": "2026RSI核心.md",
       "group": "核心",
-      "number": 26,
+      "number": 18,
       "title": "Scaling Agentic Data for Long-Horizon Terminal Intelligence",
       "id": "2610.13166",
       "level": "未归类",
@@ -678,7 +482,7 @@
     {
       "file": "2026RSI核心.md",
       "group": "核心",
-      "number": 27,
+      "number": 19,
       "title": "ReSI: Recursive Safety Improvement toward Resistant and Resilient AI",
       "id": "2610.12233",
       "level": "L1",
@@ -703,7 +507,7 @@
     {
       "file": "2026RSI核心.md",
       "group": "核心",
-      "number": 28,
+      "number": 20,
       "title": "Recursive Self-Improvement through Multi-Agent Self-Supervision",
       "id": "2610.12176",
       "level": "L2",
@@ -732,7 +536,7 @@
     {
       "file": "2026RSI核心.md",
       "group": "核心",
-      "number": 29,
+      "number": 21,
       "title": "Memento 3: Model-Based Recursive Self-Improvement through Reflective Rulebooks",
       "id": "2610.11794",
       "level": "L1",
@@ -759,33 +563,7 @@
     {
       "file": "2026RSI核心.md",
       "group": "核心",
-      "number": 30,
-      "title": "DuplexAgent-RSI: Recursive Harness Improvement for Full-Duplex Voice Agent Collaboration",
-      "id": "2610.11299",
-      "level": "L2",
-      "tags": [
-        "Executor/Harness/Workflow",
-        "Evaluator/测试任务"
-      ],
-      "reason": "协作 Harness 的可编辑流程模块跨轮修订；Exam Planner 根据失败归因与修复档案调整开发测试的采样权重，并加入失败变体，用于测试当前版本和候选版本。固定核心集、保护集、模拟器与评分规则保持不变，因此只增加测试任务标签，不标测试标准或提出策略进化。",
-      "status": "按正文相关段落复核（本对话）；本轮按统一功能分类重标",
-      "source": "https://arxiv.org/html/2610.11299#S3.SS4",
-      "review_note": "动态诊断/候选评测题集确实更新，固定测试生成程序不妨碍题集状态更新。",
-      "review_scope": "正文相关段落（本对话）",
-      "before": {
-        "level": "L1",
-        "tags": [
-          "Executor/Harness/Workflow"
-        ],
-        "reason": "从交互轨迹修订语音协作 Harness 的可编辑流程模块。",
-        "status": "根据摘要判定"
-      },
-      "semantic_change": true
-    },
-    {
-      "file": "2026RSI核心.md",
-      "group": "核心",
-      "number": 31,
+      "number": 22,
       "title": "Recursive Harness Self-Improvement for Frontier Reasoning Data Synthesis",
       "id": "2610.03548",
       "level": "L1",
@@ -814,7 +592,7 @@
     {
       "file": "2026RSI核心.md",
       "group": "核心",
-      "number": 32,
+      "number": 23,
       "title": "Safety Must Survive Self-Improvement: Why Failures Persist and How Agents Recover",
       "id": "2610.01073",
       "level": "L1",
@@ -839,7 +617,7 @@
     {
       "file": "2026RSI核心.md",
       "group": "核心",
-      "number": 33,
+      "number": 24,
       "title": "RSIGame: Autonomous Agentic Game Development with Recursive Self-improvement",
       "id": "2609.39045",
       "level": "L1",
@@ -864,32 +642,7 @@
     {
       "file": "2026RSI核心.md",
       "group": "核心",
-      "number": 34,
-      "title": "UniEvo-VL: An On-policy Self-Distillation Training Recipe for Multimodal Model Self-improvement",
-      "id": "2609.38721",
-      "level": "L1",
-      "tags": [
-        "Executor/Model/Weights"
-      ],
-      "reason": "自蒸馏训练更新多模态生成模型参数。",
-      "status": "本轮按本地摘要与既有分类依据复核",
-      "source": "",
-      "review_note": "沿用本地摘要及既有依据，统一功能角色与标签层级。",
-      "review_scope": "本地摘要与既有依据",
-      "before": {
-        "level": "L1",
-        "tags": [
-          "Executor/Model/权重"
-        ],
-        "reason": "自蒸馏训练更新多模态生成模型参数。",
-        "status": "根据摘要判定"
-      },
-      "semantic_change": false
-    },
-    {
-      "file": "2026RSI核心.md",
-      "group": "核心",
-      "number": 35,
+      "number": 25,
       "title": "CollabFlow: Recursive Self-Improvement of Agent Collaboration",
       "id": "2609.38662",
       "level": "L1",
@@ -914,7 +667,7 @@
     {
       "file": "2026RSI核心.md",
       "group": "核心",
-      "number": 36,
+      "number": 26,
       "title": "Self-Evolving Harness on Multiple Tasks with the Agent as Its Own Optimizer",
       "id": "2609.38372",
       "level": "L2",
@@ -941,32 +694,7 @@
     {
       "file": "2026RSI核心.md",
       "group": "核心",
-      "number": 37,
-      "title": "Video-RSI: Recursive Self-Improvement of Video Understanding Agents via Harness Evolution",
-      "id": "2609.37950",
-      "level": "L1",
-      "tags": [
-        "Executor/Harness/整体 Harness"
-      ],
-      "reason": "视频理解代理根据训练视频与失败解释修订自身 Harness。",
-      "status": "本轮按本地摘要与既有分类依据复核",
-      "source": "",
-      "review_note": "沿用本地摘要及既有依据，统一功能角色与标签层级。",
-      "review_scope": "本地摘要与既有依据",
-      "before": {
-        "level": "L1",
-        "tags": [
-          "Executor/Harness/整体 Harness"
-        ],
-        "reason": "视频理解代理根据训练视频与失败解释修订自身 Harness。",
-        "status": "根据摘要判定"
-      },
-      "semantic_change": false
-    },
-    {
-      "file": "2026RSI核心.md",
-      "group": "核心",
-      "number": 38,
+      "number": 27,
       "title": "Mixture of Self-Improving Branches For Agent Harness Optimization",
       "id": "2609.37834",
       "level": "L2",
@@ -995,7 +723,7 @@
     {
       "file": "2026RSI核心.md",
       "group": "核心",
-      "number": 39,
+      "number": 28,
       "title": "GÃ¶del Forest: Balancing Search Depth and Breadth for Data-Centric Recursive Self-Improvement",
       "id": "2609.36675",
       "level": "L2",
@@ -1022,7 +750,7 @@
     {
       "file": "2026RSI核心.md",
       "group": "核心",
-      "number": 40,
+      "number": 29,
       "title": "RSI-Master: Structuring Experiments to Guide Autonomous Model Improvement",
       "id": "2609.35561",
       "level": "L1",
@@ -1047,7 +775,7 @@
     {
       "file": "2026RSI核心.md",
       "group": "核心",
-      "number": 41,
+      "number": 30,
       "title": "AutoDataBench: Can Agents Write the Data That Feeds the Self-Improvement Loop?",
       "id": "2609.35025",
       "level": "未归类",
@@ -1070,7 +798,7 @@
     {
       "file": "2026RSI核心.md",
       "group": "核心",
-      "number": 42,
+      "number": 31,
       "title": "RSI-Router: Evolving Subtask-Level LLM Routing and Skills for Cost-Efficient Agents",
       "id": "2609.34712",
       "level": "L1",
@@ -1097,7 +825,7 @@
     {
       "file": "2026RSI核心.md",
       "group": "核心",
-      "number": 43,
+      "number": 32,
       "title": "R$^2$ Flow: Recursive Self-Improvement via Recursive Skill Evolution",
       "id": "2609.33867",
       "level": "L1",
@@ -1124,7 +852,7 @@
     {
       "file": "2026RSI核心.md",
       "group": "核心",
-      "number": 44,
+      "number": 33,
       "title": "COEVO: Co-Evolving Context and Parameters for Recursive Self-Improvement ⭐ Spotlight",
       "id": "2609.33398",
       "level": "L1",
@@ -1151,7 +879,7 @@
     {
       "file": "2026RSI核心.md",
       "group": "核心",
-      "number": 45,
+      "number": 34,
       "title": "PluginRSI: Recursive Improvement of Agent Harnesses with Reusable Plugins",
       "id": "2609.32423",
       "level": "L1",
@@ -1176,30 +904,7 @@
     {
       "file": "2026RSI核心.md",
       "group": "核心",
-      "number": 46,
-      "title": "Evolutionary Safety of Recursive Self-Improving AI: Taxonomy, Risk Discovery, and Evaluation",
-      "id": "2609.31186",
-      "level": "未归类",
-      "tags": [],
-      "reason": "演化安全分类与风险分析；没有单一系统的实证组件修改。",
-      "status": "本轮按本地摘要复核；不适用或不足以确认进化组件",
-      "source": "",
-      "review_note": "沿用本地摘要及既有依据，统一功能角色与标签层级。",
-      "review_scope": "本地摘要与既有依据",
-      "before": {
-        "level": "未归类",
-        "tags": [
-          "无可确认的组件标签"
-        ],
-        "reason": "演化安全分类与风险分析；没有单一系统的实证组件修改。",
-        "status": "摘要证据不足或不适用"
-      },
-      "semantic_change": false
-    },
-    {
-      "file": "2026RSI核心.md",
-      "group": "核心",
-      "number": 47,
+      "number": 35,
       "title": "RRSI: Regularized Recursive Self-Improvement of Agent Harnesses ⭐ Spotlight",
       "id": "2609.24972",
       "level": "L1",
@@ -1224,34 +929,7 @@
     {
       "file": "2026RSI核心.md",
       "group": "核心",
-      "number": 48,
-      "title": "MedRSI: Recursive Self-Improvement for Medical Agents via Clinically Aligned Self-Evolution",
-      "id": "2609.24838",
-      "level": "L1",
-      "tags": [
-        "Executor/Harness/整体 Harness",
-        "Executor/Model/Weights"
-      ],
-      "reason": "持续注册新临床工具，并进行任务专属模型训练；准入规则没有进化证据。",
-      "status": "本轮按本地摘要与既有分类依据复核",
-      "source": "",
-      "review_note": "沿用本地摘要及既有依据，统一功能角色与标签层级。",
-      "review_scope": "本地摘要与既有依据",
-      "before": {
-        "level": "L1",
-        "tags": [
-          "Executor/Harness/整体 Harness",
-          "Executor/Model/权重"
-        ],
-        "reason": "持续注册新临床工具，并进行任务专属模型训练；准入规则没有进化证据。",
-        "status": "根据摘要判定"
-      },
-      "semantic_change": false
-    },
-    {
-      "file": "2026RSI核心.md",
-      "group": "核心",
-      "number": 49,
+      "number": 36,
       "title": "SoL-Pi: Recursively Scaling Auto-Research Loops for Efficient Agent Harness",
       "id": "2609.20519",
       "level": "L1",
@@ -1276,7 +954,7 @@
     {
       "file": "2026RSI核心.md",
       "group": "核心",
-      "number": 50,
+      "number": 37,
       "title": "Self Improvement via Fast Tree-search",
       "id": "2609.19526",
       "level": "L1",
@@ -1301,7 +979,7 @@
     {
       "file": "2026RSI核心.md",
       "group": "核心",
-      "number": 51,
+      "number": 38,
       "title": "Dream-RSI: Recursive Self-Improvement through Evolving Worlds",
       "id": "2609.14858",
       "level": "L2",
@@ -1326,30 +1004,7 @@
     {
       "file": "2026RSI核心.md",
       "group": "核心",
-      "number": 52,
-      "title": "The Last AI Built by Humans: Toward Genuine Recursive Self-Improvement",
-      "id": "2609.11873",
-      "level": "未归类",
-      "tags": [],
-      "reason": "路线图与行业实践综述；未展示特定系统的组件更新。",
-      "status": "本轮按本地摘要复核；不适用或不足以确认进化组件",
-      "source": "",
-      "review_note": "沿用本地摘要及既有依据，统一功能角色与标签层级。",
-      "review_scope": "本地摘要与既有依据",
-      "before": {
-        "level": "未归类",
-        "tags": [
-          "无可确认的组件标签"
-        ],
-        "reason": "路线图与行业实践综述；未展示特定系统的组件更新。",
-        "status": "摘要证据不足或不适用"
-      },
-      "semantic_change": false
-    },
-    {
-      "file": "2026RSI核心.md",
-      "group": "核心",
-      "number": 53,
+      "number": 39,
       "title": "DataFoundry: Evolving Data Preparators via Recursive Self-Improvement",
       "id": "2608.29966",
       "level": "L1",
@@ -1374,7 +1029,7 @@
     {
       "file": "2026RSI核心.md",
       "group": "核心",
-      "number": 54,
+      "number": 40,
       "title": "iCoder-27B: Recursive AI-Led Development of Frontier Industrial Coding Model",
       "id": "2609.29626",
       "level": "L2",
@@ -1402,7 +1057,7 @@
     {
       "file": "2026RSI核心.md",
       "group": "核心",
-      "number": 55,
+      "number": 41,
       "title": "Recursive Experiential-Working Memory Evolution for Long-Horizon Agent Harnesses",
       "id": "2608.24876",
       "level": "L1",
@@ -1427,7 +1082,7 @@
     {
       "file": "2026RSI核心.md",
       "group": "核心",
-      "number": 56,
+      "number": 42,
       "title": "RecurSE: Bounded Recursive Self-Evaluation for LLM Rubric Judges",
       "id": "2608.24231",
       "level": "L2",
@@ -1452,32 +1107,7 @@
     {
       "file": "2026RSI核心.md",
       "group": "核心",
-      "number": 57,
-      "title": "BaT: Towards Self-Evolving Medical Research Agent with Stage Rubrics",
-      "id": "2608.16211",
-      "level": "L1",
-      "tags": [
-        "Executor/Model/Weights"
-      ],
-      "reason": "GRPO 更新执行模型权重；外层按固定规则读取阶段分数、选择训练阶段并回退检查点，Rubric 裁判和测试环境固定。",
-      "status": "本轮复核本地摘要与既有正文核查记录；未重新读取正文",
-      "source": "",
-      "review_note": "沿用本地摘要及既有依据，统一功能角色与标签层级。",
-      "review_scope": "本地摘要与既有依据",
-      "before": {
-        "level": "L1",
-        "tags": [
-          "Executor/Model/权重"
-        ],
-        "reason": "GRPO 更新执行模型权重；外层按固定规则读取阶段分数、选择训练阶段并回退检查点，Rubric 裁判和测试环境固定。",
-        "status": "根据论文正文核查"
-      },
-      "semantic_change": false
-    },
-    {
-      "file": "2026RSI核心.md",
-      "group": "核心",
-      "number": 58,
+      "number": 43,
       "title": "HELIX: Model-Harness Co-evolution for Recursive Self-Improvement",
       "id": "2608.13951",
       "level": "L1",
@@ -1502,56 +1132,7 @@
     {
       "file": "2026RSI核心.md",
       "group": "核心",
-      "number": 59,
-      "title": "AQuA: Recursively Self-Improving Quantitative Trading Research Agents",
-      "id": "2608.12841",
-      "level": "未归类",
-      "tags": [],
-      "reason": "改进的是量化因子与交易模型配置，研究代理及固定评估器没有自修改证据。",
-      "status": "本轮按本地摘要复核；不适用或不足以确认进化组件",
-      "source": "",
-      "review_note": "沿用本地摘要及既有依据，统一功能角色与标签层级。",
-      "review_scope": "本地摘要与既有依据",
-      "before": {
-        "level": "未归类",
-        "tags": [
-          "无可确认的组件标签"
-        ],
-        "reason": "改进的是量化因子与交易模型配置，研究代理及固定评估器没有自修改证据。",
-        "status": "摘要证据不足或不适用"
-      },
-      "semantic_change": false
-    },
-    {
-      "file": "2026RSI核心.md",
-      "group": "核心",
-      "number": 60,
-      "title": "Policy-Level Recursive Self-Improvement for Embodied AI with a Criticality World Model",
-      "id": "2607.28251",
-      "level": "L2",
-      "tags": [
-        "Executor/Model/Weights",
-        "Evaluator/测试标准"
-      ],
-      "reason": "执行策略权重更新；执行结果训练轻量 criticality 模型，预测候选场景中的失败风险并支持后续数据采集与诊断。按表现判断的功能口径，学习到的失败预测评分器归测试标准，不把它的权重计成执行器权重。场景采样公式与推理路由阈值规则本身未显示进化。",
-      "status": "按正文相关段落复核（本对话）；本轮按统一功能分类重标",
-      "source": "https://arxiv.org/html/2607.28251#S4",
-      "review_note": "独立的失败风险预测器区别于普通 RL 只用于优势估计的 value baseline。",
-      "review_scope": "正文相关段落（本对话）",
-      "before": {
-        "level": "L1",
-        "tags": [
-          "Executor/Model/权重"
-        ],
-        "reason": "执行结果指导专门策略训练，并在推理时选择训练后的策略。",
-        "status": "根据摘要判定"
-      },
-      "semantic_change": true
-    },
-    {
-      "file": "2026RSI核心.md",
-      "group": "核心",
-      "number": 61,
+      "number": 44,
       "title": "AREX: Towards a Recursively Self-Improving Agent for Deep Research",
       "id": "2607.21461",
       "level": "未归类",
@@ -1574,7 +1155,7 @@
     {
       "file": "2026RSI核心.md",
       "group": "核心",
-      "number": 62,
+      "number": 45,
       "title": "MetaSkill-Evolve: Recursive Self-Improvement of LLM Agents via Two-Timescale Meta-Skill Evolution ⭐ Spotlight",
       "id": "2607.05297",
       "level": "L2",
@@ -1601,7 +1182,7 @@
     {
       "file": "2026RSI核心.md",
       "group": "核心",
-      "number": 63,
+      "number": 46,
       "title": "The Red Queen Gödel Machine: Co-Evolving Agents and Their Evaluators ⭐ Spotlight",
       "id": "2606.26294",
       "level": "L2",
@@ -1631,8 +1212,8 @@
     {
       "file": "2026RSI核心.md",
       "group": "核心",
-      "number": 64,
-      "title": "The Meta-Agent Challenge: Are Current Agents Capable of Autonomous Agent Development? ⭐ Spotlight",
+      "number": 47,
+      "title": "The Meta-Agent Challenge: Are Current Agents Capable of Autonomous Agent Development?",
       "id": "2606.04455",
       "level": "未归类",
       "tags": [],
@@ -1648,31 +1229,6 @@
         ],
         "reason": "评估代理开发能力的固定基准；被编程的 agent 产物未显示为同一代理的自修改。",
         "status": "摘要证据不足或不适用"
-      },
-      "semantic_change": false
-    },
-    {
-      "file": "2026RSI核心.md",
-      "group": "核心",
-      "number": 65,
-      "title": "Can Recommender Systems Teach Themselves? A Recursive Self-Improving Framework with Fidelity Control",
-      "id": "2602.15659",
-      "level": "L1",
-      "tags": [
-        "Executor/Model/Weights"
-      ],
-      "reason": "模型生成交互数据，过滤后训练后继推荐模型；保真过滤机制未显示为进化对象。",
-      "status": "本轮按本地摘要与既有分类依据复核",
-      "source": "",
-      "review_note": "沿用本地摘要及既有依据，统一功能角色与标签层级。",
-      "review_scope": "本地摘要与既有依据",
-      "before": {
-        "level": "L1",
-        "tags": [
-          "Executor/Model/权重"
-        ],
-        "reason": "模型生成交互数据，过滤后训练后继推荐模型；保真过滤机制未显示为进化对象。",
-        "status": "根据摘要判定"
       },
       "semantic_change": false
     },
@@ -1757,7 +1313,7 @@
       "file": "2026RSI拓展.md",
       "group": "拓展",
       "number": 4,
-      "title": "Are Self-Evolving Agents Continual Learners? ⭐ Spotlight",
+      "title": "Are Self-Evolving Agents Continual Learners?",
       "id": "2610.25858",
       "level": "不适用（比较研究）",
       "tags": [],
@@ -1998,7 +1554,7 @@
       "file": "2026RSI拓展.md",
       "group": "拓展",
       "number": 13,
-      "title": "False Frontiers: Diagnosing and Mitigating Co-Cheating in Self-Evolving Search Agents ⭐ Spotlight",
+      "title": "False Frontiers: Diagnosing and Mitigating Co-Cheating in Self-Evolving Search Agents",
       "id": "2609.39102",
       "level": "L2",
       "tags": [
@@ -2025,7 +1581,7 @@
       "file": "2026RSI拓展.md",
       "group": "拓展",
       "number": 14,
-      "title": "SAGE: A Statistical Acceptance Gate for Self-Evolving Agents ⭐ Spotlight",
+      "title": "SAGE: A Statistical Acceptance Gate for Self-Evolving Agents",
       "id": "2609.36043",
       "level": "L1",
       "tags": [
@@ -2238,7 +1794,7 @@
       "file": "2026RSI拓展.md",
       "group": "拓展",
       "number": 22,
-      "title": "A Theory of Reliable Self-Evolution for Agent Harnesses ⭐ Spotlight",
+      "title": "A Theory of Reliable Self-Evolution for Agent Harnesses",
       "id": "2609.08175",
       "level": "不适用（理论研究）",
       "tags": [],
@@ -2391,7 +1947,7 @@
       "file": "2026RSI拓展.md",
       "group": "拓展",
       "number": 28,
-      "title": "SPADE: Self-Play in Adaptive Synthetic Executable Environments ⭐ Spotlight",
+      "title": "SPADE: Self-Play in Adaptive Synthetic Executable Environments",
       "id": "2608.19197",
       "level": "L2",
       "tags": [
@@ -2580,7 +2136,7 @@
       "file": "2026RSI拓展.md",
       "group": "拓展",
       "number": 35,
-      "title": "Self-Authored Verification Is Unreliable in Heuristic Self-Improving Agents ⭐ Spotlight",
+      "title": "Self-Authored Verification Is Unreliable in Heuristic Self-Improving Agents",
       "id": "2607.24300",
       "level": "L2",
       "tags": [
@@ -2636,7 +2192,7 @@
       "file": "2026RSI拓展.md",
       "group": "拓展",
       "number": 37,
-      "title": "Recursive Harness Self-Improvement ⭐ Spotlight",
+      "title": "Recursive Harness Self-Improvement",
       "id": "2607.15524",
       "level": "L1",
       "tags": [
@@ -2830,7 +2386,7 @@
       "file": "2026RSI拓展.md",
       "group": "拓展",
       "number": 44,
-      "title": "Harness Updating Is Not Harness Benefit: Disentangling Evolution Capabilities in Self-Evolving LLM Agents ⭐ Spotlight",
+      "title": "Harness Updating Is Not Harness Benefit: Disentangling Evolution Capabilities in Self-Evolving LLM Agents",
       "id": "2605.30621",
       "level": "不适用（比较研究）",
       "tags": [],
@@ -3177,7 +2733,7 @@
       "file": "2026RSI拓展.md",
       "group": "拓展",
       "number": 57,
-      "title": "Dr. Zero: Self-Evolving Search Agents without Training Data ⭐ Spotlight",
+      "title": "Dr. Zero: Self-Evolving Search Agents without Training Data",
       "id": "2601.07055",
       "level": "L2",
       "tags": [
@@ -3229,7 +2785,7 @@
       "file": "2026RSI拓展.md",
       "group": "拓展",
       "number": 59,
-      "title": "MemRL: Self-Evolving Agents via Runtime Reinforcement Learning on Episodic Memory ⭐ Spotlight",
+      "title": "MemRL: Self-Evolving Agents via Runtime Reinforcement Learning on Episodic Memory",
       "id": "2601.03192",
       "level": "L1",
       "tags": [
