@@ -1,0 +1,35 @@
+{
+  "total": 124,
+  "unique_ids": 124,
+  "tagged": 106,
+  "method_levels": 105,
+  "semantic_changes": 23,
+  "body_review": 27,
+  "module_counts": {
+    "Executor": 103,
+    "Evaluator": 28,
+    "Improver": 38
+  },
+  "tag_counts": {
+    "Executor/Harness/整体 Harness": 40,
+    "Executor/Harness/Prompt": 7,
+    "Executor/Harness/Skill": 24,
+    "Executor/Harness/Memory": 8,
+    "Executor/Harness/Workflow": 10,
+    "Executor/Model/Weights": 43,
+    "Executor/Model/模型结构": 0,
+    "Evaluator/测试任务": 6,
+    "Evaluator/测试标准": 24,
+    "Improver/提出策略": 37,
+    "Improver/筛选策略": 7
+  },
+  "levels": {
+    "未归类": 14,
+    "L1": 54,
+    "L2": 51,
+    "不适用（比较研究）": 2,
+    "不适用（理论研究）": 1,
+    "不适用（基准论文）": 1,
+    "相邻研究（非完整 RSI）": 1
+  }
+}
