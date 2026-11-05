@@ -21,6 +21,16 @@
     .chart-head { display: flex; align-items: center; justify-content: space-between; gap: 8px; padding: 0 7px; }
     .chart-note { color: #738297; font-size: 12px; margin: 5px 7px 2px; }
     .chart-card svg { width: 100%; height: auto; display: block; }
+    .collection-card { grid-column: 1 / -1; }
+    .collection-layout { display: grid; grid-template-columns: minmax(240px,.85fr) minmax(260px,1.15fr); align-items: center; gap: 24px; padding: 0 18px 10px; }
+    #collection-chart { max-width: 480px; width: 100%; justify-self: center; }
+    .collection-legend { display: grid; gap: 20px; }
+    .collection-item { display: grid; grid-template-columns: 13px 1fr; column-gap: 11px; align-items: start; }
+    .collection-dot { width: 12px; height: 12px; border-radius: 50%; margin-top: 8px; }
+    .collection-label { display: flex; flex-wrap: wrap; gap: 8px 15px; align-items: baseline; font-weight: 600; font-size: 16px; }
+    .collection-value { color: #53657d; font-size: 14px; font-weight: 400; }
+    .collection-definition { margin: 4px 0 0; font-size: 14px; color: #67768a; }
+    .collection-footnote { color: #738297; font-size: 12px; margin: 0; }
     .filters,.module-filters { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; }
     input,select,button { font: inherit; }
     input[type="search"],select { border: 1px solid #ccd6e3; border-radius: 7px; padding: 8px 10px; background: white; color: inherit; max-width: 100%; }
@@ -71,6 +81,8 @@
     @media(max-width:1000px) { .charts { grid-template-columns: 1fr; } }
     @media(max-width:850px) { .cards { grid-template-columns: repeat(2,minmax(0,1fr)); } main { padding: 24px 15px; } }
     @media(max-width:600px) {
+      .collection-layout { grid-template-columns: 1fr; gap: 5px; padding: 0 5px 15px; }
+      #collection-chart { max-width: 360px; }
       .component-groups { grid-template-columns: 1fr; }
       .panel { padding: 16px; }
       input[type="search"] { min-width: 0; flex-basis: 100%; }
@@ -93,8 +105,12 @@
 
   <section class="panel" id="global-charts">
     <h2>全库统计图</h2>
-    <p class="small">固定展示全部条目。模块/组件允许多标签，占比之和可超过 100%；组合图为互斥计数。这里只描述当前筛选文集。</p>
+    <p class="small">模块、组件、层级与组合图按全库合并计数；文集数量饼图单独展示核心与拓展。模块/组件允许多标签，占比之和可超过 100%；组合图与文集饼图为互斥计数。</p>
     <div class="charts">
+      <article class="chart-card collection-card">
+        <div class="chart-head"><h3>核心与拓展数量</h3><button class="download" data-chart="collection-chart" type="button">下载 SVG</button></div>
+        <div class="collection-layout"><div id="collection-chart"></div><div id="collection-legend" class="collection-legend"></div></div>
+      </article>
       <article class="chart-card"><div class="chart-head"><h3>模块覆盖</h3><button class="download" data-chart="module-chart" type="button">下载 SVG</button></div><p class="chart-note">每个模块内每篇只计一次</p><div id="module-chart"></div></article>
       <article class="chart-card"><div class="chart-head"><h3>结构层级分布</h3><button class="download" data-chart="level-chart" type="button">下载 SVG</button></div><p class="chart-note">结构层级不代表完整递归闭环或自加速</p><div id="level-chart"></div></article>
       <article class="chart-card"><div class="chart-head"><h3>11 个具体组件</h3><button class="download" data-chart="component-chart" type="button">下载 SVG</button></div><p class="chart-note">0 表示当前文集未确认该组件</p><div id="component-chart"></div></article>
@@ -177,68 +193,58 @@
   function drawCharts() {
     const moduleData = [...MODULES.map(module => ({
       label: module,
-      core: coreRows.filter(row => hasModule(row, module)).length,
-      extra: extraRows.filter(row => hasModule(row, module)).length,
+      total: DATA.filter(row => hasModule(row, module)).length,
     })), {
       label: '无可确认组件',
-      core: coreRows.filter(row => !row.tags.length).length,
-      extra: extraRows.filter(row => !row.tags.length).length,
+      total: DATA.filter(row => !row.tags.length).length,
     }];
     const left = 132, width = 365, max = 120;
-    let content = legend([['核心（65）', COLORS.core], ['拓展（59）', COLORS.extra]], 25, left);
+    let content = svgText(left, 25, `全库 ${DATA.length} 篇`, { size: 13, fill: '#64748b' });
     content += axis(left, 52, width, 273, max, 20);
     moduleData.forEach((row, index) => {
-      const y = 69 + index * 55, total = row.core + row.extra;
-      const a = row.core / max * width, b = row.extra / max * width;
+      const y = 69 + index * 55, total = row.total;
+      const barWidth = total / max * width;
+      const color = [COLORS.core, '#cc944e', COLORS.extra, COLORS.other][index];
       content += svgText(left - 13, y + 15, row.label, { anchor: 'end', size: 14 });
       content += `<g data-category="${esc(row.label)}" data-total="${total}">`;
-      content += svgBar(left, y, a, 30, COLORS.core, `${row.label}：核心 ${row.core} 篇`);
-      content += svgBar(left + a, y, b, 30, COLORS.extra, `${row.label}：拓展 ${row.extra} 篇`);
-      if (a > 23) content += svgText(left + a / 2, y + 15, row.core, { anchor: 'middle', fill: 'white', weight: 600 });
-      if (b > 23) content += svgText(left + a + b / 2, y + 15, row.extra, { anchor: 'middle', fill: 'white', weight: 600 });
-      content += svgText(left + a + b + 9, y + 15, `${total} · ${pct(total)}`, { size: 13 });
+      content += svgBar(left, y, barWidth, 30, color, `${row.label}：${total} 篇，占全库 ${pct(total)}`);
+      content += svgText(left + barWidth + 9, y + 15, `${total} · ${pct(total)}`, { size: 13 });
       content += '</g>';
     });
-    svgChart('module-chart', '模块覆盖', '核心与拓展文集的模块多标签计数；分母为全部 124 篇。', 312, content);
+    svgChart('module-chart', '模块覆盖', `全库的模块多标签计数；分母为全部 ${DATA.length} 篇。`, 312, content);
 
     const levels = [{ label: 'L1', color: COLORS.core }, { label: 'L2', color: COLORS.extra }, { label: '其他', color: COLORS.other }];
-    content = legend(levels.map(row => [row.label, row.color]), 25, 125);
-    const levelLeft = 105, levelWidth = 493, levelMax = 70;
-    content += axis(levelLeft, 54, levelWidth, 223, levelMax, 10);
-    [coreRows, extraRows].forEach((group, index) => {
-      const y = 81 + index * 88;
-      content += svgText(levelLeft - 12, y + 21, `${index ? '拓展' : '核心'}（${group.length}）`, { anchor: 'end', size: 14 });
-      let offset = levelLeft;
-      levels.forEach(level => {
-        const n = group.filter(row => level.label === '其他' ? !['L1','L2'].includes(row.level) : row.level === level.label).length;
-        const barWidth = n / levelMax * levelWidth;
-        content += svgBar(offset, y, barWidth, 42, level.color, `${index ? '拓展' : '核心'} / ${level.label}：${n} 篇，占本表 ${pct(n, group.length)}`, `data-category="${index ? '拓展' : '核心'}/${level.label}" data-total="${n}"`);
-        if (n) content += svgText(offset + barWidth / 2, y + 21, `${n} · ${pct(n, group.length)}`, { anchor: 'middle', size: 12, fill: level.label === '其他' ? '#25364a' : 'white', weight: 600 });
-        offset += barWidth;
-      });
+    const levelLeft = 105, levelWidth = 390, levelMax = 60;
+    content = svgText(levelLeft, 25, `全库 ${DATA.length} 篇`, { size: 13, fill: '#64748b' });
+    content += axis(levelLeft, 54, levelWidth, 246, levelMax, 10);
+    levels.forEach((level, index) => {
+      const y = 70 + index * 58;
+      const n = DATA.filter(row => level.label === '其他' ? !['L1','L2'].includes(row.level) : row.level === level.label).length;
+      const barWidth = n / levelMax * levelWidth;
+      content += svgText(levelLeft - 12, y + 17, level.label, { anchor: 'end', size: 14 });
+      content += svgBar(levelLeft, y, barWidth, 34, level.color, `${level.label}：${n} 篇，占全库 ${pct(n)}`, `data-category="${level.label}" data-total="${n}"`);
+      content += svgText(levelLeft + barWidth + 9, y + 17, `${n} · ${pct(n)}`, { size: 13 });
     });
-    content += svgText(levelLeft, 272, '其他含未归类、不适用及相邻研究', { size: 12, fill: '#738297' });
+    content += svgText(levelLeft, 291, '其他含未归类、不适用及相邻研究', { size: 12, fill: '#738297' });
     svgChart('level-chart', '结构层级分布', 'L1 仅执行侧更新；L2 评价或改进机制也更新；其他状态保留。', 312, content);
 
-    content = legend([['核心', COLORS.core], ['拓展', COLORS.extra]], 24, 205);
-    const componentLeft = 218, componentWidth = 347, componentMax = 25;
-    content += axis(componentLeft, 49, componentWidth, 536, componentMax, 5);
+    content = svgText(218, 24, `全库 ${DATA.length} 篇 · 多标签计数`, { size: 13, fill: '#64748b' });
+    const componentLeft = 218, componentWidth = 325, componentMax = 50;
+    content += axis(componentLeft, 49, componentWidth, 536, componentMax, 10);
     TAGS.forEach((tag, index) => {
       const y = 65 + index * 43;
       let label = tag.replace('Executor/', '').replaceAll('/', ' · ');
       if (index === 5 || index === 7 || index === 9) content += `<line x1="13" y1="${y - 17}" x2="615" y2="${y - 17}" stroke="#d9e2ed"/>`;
       content += svgText(componentLeft - 13, y + 5, label, { anchor: 'end', size: 13 });
-      const a = coreRows.filter(row => row.tags.includes(tag)).length;
-      const b = extraRows.filter(row => row.tags.includes(tag)).length;
-      content += `<g data-category="${esc(tag)}" data-total="${a + b}">`;
-      [[a, y - 10, COLORS.core, '核心'], [b, y + 7, COLORS.extra, '拓展']].forEach(([n, by, color, group]) => {
-        const barWidth = n / componentMax * componentWidth;
-        content += svgBar(componentLeft, by, barWidth, 13, color, `${tag} / ${group}：${n} 篇`);
-        content += svgText(componentLeft + barWidth + 6, by + 6.5, n, { size: 12 });
-      });
+      const n = DATA.filter(row => row.tags.includes(tag)).length;
+      const color = tag.startsWith('Evaluator/') ? '#cc944e' : tag.startsWith('Improver/') ? COLORS.extra : COLORS.core;
+      const barWidth = n / componentMax * componentWidth;
+      content += `<g data-category="${esc(tag)}" data-total="${n}">`;
+      content += svgBar(componentLeft, y - 7, barWidth, 24, color, `${tag}：${n} 篇，占全库 ${pct(n)}`);
+      content += svgText(componentLeft + barWidth + 7, y + 5, `${n} · ${pct(n)}`, { size: 12 });
       content += '</g>';
     });
-    svgChart('component-chart', '11 个具体组件', '按功能角色对 11 个组件作多标签统计；展示核心与拓展的各自篇数。', 575, content);
+    svgChart('component-chart', '11 个具体组件', '按功能角色对全库的 11 个组件作多标签统计。', 575, content);
 
     const combinations = [
       [['Executor'], '仅 Executor'], [['Evaluator'], '仅 Evaluator'], [['Improver'], '仅 Improver'],
@@ -260,6 +266,32 @@
     });
     content += svgText(15, 526, '使用固定评价器或改进器不会获得相应更新标签', { size: 12, fill: '#738297' });
     svgChart('combination-chart', '互斥模块组合', '每篇只进入一个模块组合，八个组合的计数合计为 124。', 552, content);
+
+    const collections = [
+      { label: '核心', count: coreRows.length, color: COLORS.core, definition: '题目或摘要提到 RSI 的论文' },
+      { label: '拓展', count: extraRows.length, color: COLORS.extra, definition: '由我们人为判断与 RSI 相关的论文' },
+    ];
+    const total = collections.reduce((sum, item) => sum + item.count, 0);
+    const cx = 320, cy = 163, radius = 135;
+    let angle = -Math.PI / 2;
+    content = '';
+    collections.forEach(item => {
+      const delta = item.count / total * 2 * Math.PI;
+      const end = angle + delta;
+      const x1 = cx + radius * Math.cos(angle), y1 = cy + radius * Math.sin(angle);
+      const x2 = cx + radius * Math.cos(end), y2 = cy + radius * Math.sin(end);
+      const description = `${item.label}：${item.count} 篇，占 ${pct(item.count, total)}；${item.definition}`;
+      content += `<path d="M ${cx} ${cy} L ${x1} ${y1} A ${radius} ${radius} 0 ${delta > Math.PI ? 1 : 0} 1 ${x2} ${y2} Z" fill="${item.color}" stroke="#f8fafd" stroke-width="3" data-category="${item.label}" data-total="${item.count}"><title>${esc(description)}</title></path>`;
+      const middle = angle + delta / 2;
+      const lx = cx + 76 * Math.cos(middle), ly = cy + 76 * Math.sin(middle);
+      content += svgText(lx, ly - 22, item.label, { anchor: 'middle', fill: 'white', size: 19, weight: 600 });
+      content += svgText(lx, ly + 4, `${item.count} 篇`, { anchor: 'middle', fill: 'white', size: 24, weight: 600 });
+      content += svgText(lx, ly + 30, pct(item.count, total), { anchor: 'middle', fill: 'white', size: 17 });
+      angle = end;
+    });
+    content += svgText(cx, 326, `共 ${total} 篇 · 两类互斥计数`, { anchor: 'middle', size: 14, fill: '#64748b' });
+    svgChart('collection-chart', '核心与拓展数量', collections.map(item => `${item.label} ${item.count} 篇：${item.definition}`).join('；'), 351, content);
+    el('collection-legend').innerHTML = collections.map(item => `<div class="collection-item"><span class="collection-dot" style="background:${item.color}"></span><div><div class="collection-label">${item.label}<span class="collection-value">${item.count} 篇 · ${pct(item.count, total)}</span></div><p class="collection-definition">${item.definition}</p></div></div>`).join('') + `<p class="collection-footnote">按当前两个文集的归属统计，合计 ${total} 篇。</p>`;
   }
 
   function buildComponentOptions() {
