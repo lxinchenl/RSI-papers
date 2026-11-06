@@ -1,9 +1,9 @@
 {
-  "date": "2026-11-05",
+  "date": "2026-11-06",
   "scope": "排除综述/路线图、专门垂类应用、benchmark 及单纯比较/实证分析。保留提出通用 Agent/Harness、代码与模型研发方法的论文；方法论文不因使用多个 benchmark 做实验而排除。理论论文若提出新判定方法并实际检验可保留。",
   "before_total": 124,
   "removed_total": 29,
-  "after_total": 95,
+  "after_total": 102,
   "excluded": [
     {
       "id": "2610.40191",
@@ -299,5 +299,69 @@
   ],
   "spotlight_limit": 20,
   "spotlight_limit_basis": "用户明确以最多20篇替代原来的10%限制。",
-  "latest_backup": "rsi_outputs/before_component_review_20261105"
+  "latest_backup": "rsi_outputs/before_add_20261106",
+  "added_total": 7,
+  "additions": [
+    {
+      "id": "2605.23904",
+      "title": "SkillOpt: Executive Strategy for Self-Evolving Agent Skills",
+      "group": "拓展",
+      "source": "https://arxiv.org/html/2605.23904#S3.SS6",
+      "why": "微软的可控 Skill 优化方法，同时给出优化器侧元经验更新和跨模型、Harness 迁移。"
+    },
+    {
+      "id": "2609.33295",
+      "title": "TraceDance: An Automated System for Building Agent Behavior Benchmarks from Real-World Agent Deployment Traces",
+      "group": "核心",
+      "source": "https://arxiv.org/html/2609.33295#S3.SS2",
+      "why": "把真实部署问题变成按需构建的行为诊断基准，为动态 Evaluator 提供具体实现。"
+    },
+    {
+      "id": "2610.36077",
+      "title": "The Trinity: Capability-Driven Recursive Self-Improvement for Multimodal Agents",
+      "group": "核心",
+      "source": "https://arxiv.org/html/2610.36077#S3.SS5",
+      "why": "将通用能力组织、训练世界构建与执行 Harness 更新联动，并让 Creator 的构建机制跨轮积累改进。"
+    },
+    {
+      "id": "2610.35434",
+      "title": "Skill∞: Recursive Self-Improvement for Agent Skill Optimization",
+      "group": "核心",
+      "source": "https://arxiv.org/html/2610.35434#A3",
+      "why": "不仅更新任务技能，还直接改写如何优化技能的程序，并给出筛选规则变化实例。"
+    },
+    {
+      "id": "2610.20926",
+      "title": "SkillNEO: Non-Elitist Evolutionary Optimization of Agent Skills",
+      "group": "拓展",
+      "source": "https://arxiv.org/html/2610.20926#S3",
+      "why": "解释为什么暂时低分的技能版本仍可能成为有效改进的中间步骤，补充纯单调验收方法。"
+    },
+    {
+      "id": "2611.03868",
+      "title": "EvoGroup: A Self-Evolving Harness for Group Agents in Shared Contexts",
+      "group": "拓展",
+      "source": "https://arxiv.org/html/2611.03868#S2.SS4",
+      "why": "美团与中山大学的近期通用群体 Agent Harness 方法，给出留出评估及冻结后的跨基准检验。"
+    },
+    {
+      "id": "2611.01840",
+      "title": "Self-Evolving Agentic Workflows via Semantic Decomposition of Complex Tasks",
+      "group": "拓展",
+      "source": "https://arxiv.org/html/2611.01840#S3.SS2",
+      "why": "腾讯与香港城大的近期工作流方法，将反馈驱动的任务分解与可执行程序修订结合。"
+    }
+  ],
+  "exceptions": [
+    {
+      "id": "2609.33295",
+      "title": "TraceDance: An Automated System for Building Agent Behavior Benchmarks from Real-World Agent Deployment Traces",
+      "exception": "用户明确点名收录的诊断基准方法；不放开其他 benchmark 或单纯比较研究。"
+    },
+    {
+      "id": "2610.36077",
+      "title": "The Trinity: Capability-Driven Recursive Self-Improvement for Multimodal Agents",
+      "exception": "用户明确点名收录的多模态/具身特例；其他专门垂类仍按原范围排除。"
+    }
+  ]
 }
