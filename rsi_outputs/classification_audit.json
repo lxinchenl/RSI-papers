@@ -8,16 +8,16 @@
       "number": 1,
       "title": "HarnessMM: Recursive Self-Improvement for Harness Token Efficiency",
       "id": "2610.32813",
+      "institutions": "Tsinghua University, Microsoft Research Asia",
       "level": "L1",
       "tags": [
-        "Executor/Harness/Memory",
-        "Executor/Harness/Workflow"
+        "Executor/Harness/整体 Harness"
       ],
-      "reason": "反复修订 Harness 配置与可复用的决策图，以改变后续工具回调流程。",
-      "status": "本轮按本地摘要与既有分类依据复核",
-      "source": "",
-      "review_note": "沿用本地摘要及既有依据，统一功能角色与标签层级。",
-      "review_scope": "本地摘要与既有依据",
+      "reason": "正文 §4、§5.6 与附录 A、D.4–D.5 区分任务内 EDG 执行与训练反馈指导的外围 Harness 配置迭代。EDG 保存的是当前 episode 中已确定的字面动作，仅跨工具反馈边界复用，不据此标跨任务 Memory；固定的回调替换机制也不等于 Workflow 规则在跨轮进化。确认被迭代修订的是提示、上下文、视觉定位等外围配置，故按整体 Harness 保守标注。模型与原生评分器固定；附录 A 说明该曲线不代表自主优化器多轮自改，不标 Improver。",
+      "status": "按正文相关段落复核（本对话）；本轮按统一功能分类重标",
+      "source": "https://arxiv.org/html/2610.32813#S5.SS6",
+      "review_note": "2026-11-06 补读方法边界及附录 A、D：撤销把 episode 内决策缓存当 Memory、把固定执行机制当进化 Workflow 的标签，保留配置迭代层面的 L1。",
+      "review_scope": "正文相关段落（本对话）",
       "before": {
         "level": "L1",
         "tags": [
@@ -27,7 +27,7 @@
         "reason": "反复修订 Harness 配置与可复用的决策图，以改变后续工具回调流程。",
         "status": "根据摘要判定"
       },
-      "semantic_change": false
+      "semantic_change": true
     },
     {
       "file": "2026RSI核心.md",
@@ -35,6 +35,7 @@
       "number": 2,
       "title": "RSIHub: A Composable Framework for Agent-Evolution Methods",
       "id": "2610.32253",
+      "institutions": "Douyin Group, Shanghai Jiao Tong University, Beijing Institute for General Artificial Intelligence, University of California, Berkeley",
       "level": "L2",
       "tags": [
         "Executor/Harness/整体 Harness",
@@ -66,6 +67,7 @@
       "number": 3,
       "title": "HarnessPro: Recursive Harness Self-Improvement with Pareto Optimization for Performance-Cost Trade-offs",
       "id": "2610.26770",
+      "institutions": "Tsinghua University, Z.AI Co., Ltd., Shanghai Jiao Tong University, University of Warwick, Kuaishou Technology",
       "level": "L1",
       "tags": [
         "Executor/Harness/整体 Harness"
@@ -91,6 +93,7 @@
       "number": 4,
       "title": "CoEvo-RSI: When Harnesses Evolve, Which Models Should Follow?",
       "id": "2610.25078",
+      "institutions": "National University of Singapore, Agency for Science, Technology and Research (ASTAR), SenseTime Group Inc.",
       "level": "L1",
       "tags": [
         "Executor/Harness/整体 Harness",
@@ -118,6 +121,7 @@
       "number": 5,
       "title": "R$^2$Orch: Recursive Self-Improvement for Agent Orchestration via Self-Play within a Skill-Internalization Loop",
       "id": "2610.22740",
+      "institutions": "Chinese University of Hong Kong, Shenzhen, Fudan University, University of Illinois Urbana-Champaign, Tsinghua University, National University of Singapore",
       "level": "L2",
       "tags": [
         "Executor/Harness/Skill",
@@ -147,6 +151,7 @@
       "number": 6,
       "title": "Terminal-RSI: Recursive Self-Improving Terminal Agents via Recursive Self-Rewrite and Policy-Refine",
       "id": "2610.22192",
+      "institutions": "Tencent Hy Frontier, National University of Singapore",
       "level": "L1",
       "tags": [
         "Executor/Model/Weights"
@@ -172,6 +177,7 @@
       "number": 7,
       "title": "Athanor: An Agent-Native System for Autonomous Post-Training Research",
       "id": "2610.21055",
+      "institutions": "Bytedance, Duke University",
       "level": "L2",
       "tags": [
         "Executor/Model/Weights",
@@ -199,6 +205,7 @@
       "number": 8,
       "title": "SwarmRSI: Recursive Self-Improvement through Evolving Scientific Agent Swarm",
       "id": "2610.20431",
+      "institutions": "Huawei",
       "level": "L1",
       "tags": [
         "Executor/Harness/Memory"
@@ -224,6 +231,7 @@
       "number": 9,
       "title": "AReaL-RSI: Adaptive Scaling and Coordination of Recursive Self-Improvement",
       "id": "2610.18083",
+      "institutions": "Ant Group, Zhejiang University, Hong Kong University of Science and Technology",
       "level": "L2",
       "tags": [
         "Executor/Harness/Prompt",
@@ -255,6 +263,7 @@
       "number": 10,
       "title": "Drafting Agents, Not Just Tokens: Speculative Recursive Self-Improvement for Agentic Systems",
       "id": "2610.16491",
+      "institutions": "Tencent, Peking University",
       "level": "L2",
       "tags": [
         "Executor/Harness/整体 Harness",
@@ -283,6 +292,7 @@
       "number": 11,
       "title": "Harness^2: Recursive Agent Harnessing for an Open World ⭐ Spotlight",
       "id": "2610.14224",
+      "institutions": "Northwestern University, Google Cloud AI Research",
       "level": "L2",
       "tags": [
         "Executor/Harness/整体 Harness",
@@ -310,6 +320,7 @@
       "number": 12,
       "title": "AutoEnvScaling: Automating the Data Flywheel with Terminal Agents",
       "id": "2610.14163",
+      "institutions": "Northeastern University, Microsoft, Stanford University, University of Washington, University of North Carolina at Chapel Hill",
       "level": "L2",
       "tags": [
         "Executor/Model/Weights",
@@ -337,6 +348,7 @@
       "number": 13,
       "title": "Scaling Agentic Data for Long-Horizon Terminal Intelligence",
       "id": "2610.13166",
+      "institutions": "University of Science and Technology of China, AMAP, Alibaba Group, Southern University of Science and Technology",
       "level": "相邻研究（非完整 RSI）",
       "tags": [],
       "reason": "正文 §2、§4.1 与附录 C 显示：固定数据构造管线迭代重建和扩展任务包，之后离线 SFT；RSI-Exam 案例主要改进算法、研究方案和最终交付物。未确认训练后的模型返回修改自身数据管线，也未确认跨任务继承的 Agent/Harness 改动。一次性 SFT 权重变化、训练任务产物及其验证器不直接作为 RSI 进化标签，因此保留为相邻研究。",
@@ -360,6 +372,7 @@
       "number": 14,
       "title": "ReSI: Recursive Safety Improvement toward Resistant and Resilient AI",
       "id": "2610.12233",
+      "institutions": "Shanghai Artificial Intelligence Laboratory, National University of Singapore, Shanghai Jiao Tong University, University of Science and Technology of China, Tsinghua University",
       "level": "L1",
       "tags": [
         "Executor/Model/Weights"
@@ -385,6 +398,7 @@
       "number": 15,
       "title": "Recursive Self-Improvement through Multi-Agent Self-Supervision",
       "id": "2610.12176",
+      "institutions": "University of California, Berkeley",
       "level": "L2",
       "tags": [
         "Executor/Harness/Workflow",
@@ -414,6 +428,7 @@
       "number": 16,
       "title": "Memento 3: Model-Based Recursive Self-Improvement through Reflective Rulebooks",
       "id": "2610.11794",
+      "institutions": "University College London, Huawei Noah’s Ark Lab, University of Liverpool",
       "level": "L1",
       "tags": [
         "Executor/Harness/整体 Harness",
@@ -441,6 +456,7 @@
       "number": 17,
       "title": "Recursive Harness Self-Improvement for Frontier Reasoning Data Synthesis",
       "id": "2610.03548",
+      "institutions": "Shanghai Jiao Tong University, University of Science and Technology of China, Shanghai University of Finance and Economics, Imperial College London, University of Cambridge, Nanyang Technological University, Fudan University, University of Electronic Science and Technology of China",
       "level": "L1",
       "tags": [
         "Executor/Harness/Prompt",
@@ -470,6 +486,7 @@
       "number": 18,
       "title": "RSIGame: Autonomous Agentic Game Development with Recursive Self-improvement",
       "id": "2609.39045",
+      "institutions": "University of California, San Diego, Bytedance, Carnegie Mellon University",
       "level": "L1",
       "tags": [
         "Executor/Model/Weights"
@@ -495,6 +512,7 @@
       "number": 19,
       "title": "CollabFlow: Recursive Self-Improvement of Agent Collaboration",
       "id": "2609.38662",
+      "institutions": "Chinese University of Hong Kong, Shenzhen, Fudan University, University of Oxford",
       "level": "L1",
       "tags": [
         "Executor/Model/Weights"
@@ -520,6 +538,7 @@
       "number": 20,
       "title": "Self-Evolving Harness on Multiple Tasks with the Agent as Its Own Optimizer",
       "id": "2609.38372",
+      "institutions": "Nanjing University",
       "level": "L2",
       "tags": [
         "Executor/Harness/整体 Harness",
@@ -547,6 +566,7 @@
       "number": 21,
       "title": "Mixture of Self-Improving Branches For Agent Harness Optimization ⭐ Spotlight",
       "id": "2609.37834",
+      "institutions": "Meta, Duke University, University of California, Davis",
       "level": "L2",
       "tags": [
         "Executor/Harness/整体 Harness",
@@ -576,6 +596,7 @@
       "number": 22,
       "title": "GÃ¶del Forest: Balancing Search Depth and Breadth for Data-Centric Recursive Self-Improvement",
       "id": "2609.36675",
+      "institutions": "Evolvent AI, Hong Kong Polytechnic University, National University of Singapore, Columbia University",
       "level": "L2",
       "tags": [
         "Executor/Model/Weights",
@@ -603,6 +624,7 @@
       "number": 23,
       "title": "RSI-Master: Structuring Experiments to Guide Autonomous Model Improvement",
       "id": "2609.35561",
+      "institutions": "Shanghai Jiao Tong University, Carnegie Mellon University, University of Waterloo",
       "level": "L1",
       "tags": [
         "Executor/Model/Weights"
@@ -628,6 +650,7 @@
       "number": 24,
       "title": "RSI-Router: Evolving Subtask-Level LLM Routing and Skills for Cost-Efficient Agents",
       "id": "2609.34712",
+      "institutions": "Shanghai Artificial Intelligence Laboratory",
       "level": "L1",
       "tags": [
         "Executor/Harness/Skill",
@@ -655,6 +678,7 @@
       "number": 25,
       "title": "R$^2$ Flow: Recursive Self-Improvement via Recursive Skill Evolution",
       "id": "2609.33867",
+      "institutions": "Chinese University of Hong Kong, Shenzhen, Fudan University, University of Illinois Urbana-Champaign, University of Oxford, National University of Singapore",
       "level": "L1",
       "tags": [
         "Executor/Harness/Skill",
@@ -682,6 +706,7 @@
       "number": 26,
       "title": "COEVO: Co-Evolving Context and Parameters for Recursive Self-Improvement ⭐ Spotlight",
       "id": "2609.33398",
+      "institutions": "Peking University, Emotional Machine",
       "level": "L1",
       "tags": [
         "Executor/Harness/Prompt",
@@ -709,6 +734,7 @@
       "number": 27,
       "title": "PluginRSI: Recursive Improvement of Agent Harnesses with Reusable Plugins",
       "id": "2609.32423",
+      "institutions": "University of Science and Technology of China, Meituan, Wuhan University, National University of Singapore",
       "level": "L1",
       "tags": [
         "Executor/Harness/整体 Harness"
@@ -734,6 +760,7 @@
       "number": 28,
       "title": "RRSI: Regularized Recursive Self-Improvement of Agent Harnesses ⭐ Spotlight",
       "id": "2609.24972",
+      "institutions": "Google Cloud AI Research, University of North Carolina at Chapel Hill, Stanford University, Washington University in St. Louis",
       "level": "L1",
       "tags": [
         "Executor/Harness/整体 Harness"
@@ -759,6 +786,7 @@
       "number": 29,
       "title": "SoL-Pi: Recursively Scaling Auto-Research Loops for Efficient Agent Harness",
       "id": "2609.20519",
+      "institutions": "NVIDIA, Nanyang Technological University, Massachusetts Institute of Technology",
       "level": "L1",
       "tags": [
         "Executor/Harness/整体 Harness"
@@ -784,6 +812,7 @@
       "number": 30,
       "title": "Self Improvement via Fast Tree-search",
       "id": "2609.19526",
+      "institutions": "Massachusetts Institute of Technology, Sakana AI",
       "level": "L1",
       "tags": [
         "Executor/Harness/整体 Harness"
@@ -809,6 +838,7 @@
       "number": 31,
       "title": "Dream-RSI: Recursive Self-Improvement through Evolving Worlds ⭐ Spotlight",
       "id": "2609.14858",
+      "institutions": "Google, University of Maryland, College Park, Google DeepMind, University of Virginia",
       "level": "L2",
       "tags": [
         "Improver/筛选策略"
@@ -834,6 +864,7 @@
       "number": 32,
       "title": "DataFoundry: Evolving Data Preparators via Recursive Self-Improvement",
       "id": "2608.29966",
+      "institutions": "IDEA Research, International Digital Economy Academy, Hong Kong University of Science and Technology (Guangzhou)",
       "level": "L1",
       "tags": [
         "Executor/Harness/Workflow"
@@ -859,6 +890,7 @@
       "number": 33,
       "title": "iCoder-27B: Recursive AI-Led Development of Frontier Industrial Coding Model ⭐ Spotlight",
       "id": "2609.29626",
+      "institutions": "Shanghai Jiao Tong University, DP Technology, National University of Singapore, Endless Frontier",
       "level": "L2",
       "tags": [
         "Executor/Model/Weights",
@@ -887,6 +919,7 @@
       "number": 34,
       "title": "Recursive Experiential-Working Memory Evolution for Long-Horizon Agent Harnesses",
       "id": "2608.24876",
+      "institutions": "National University of Singapore, Stanford University, University of Oxford, Princeton University",
       "level": "L1",
       "tags": [
         "Executor/Harness/Memory"
@@ -912,6 +945,7 @@
       "number": 35,
       "title": "RecurSE: Bounded Recursive Self-Evaluation for LLM Rubric Judges",
       "id": "2608.24231",
+      "institutions": "Zhejiang University, Meituan",
       "level": "L2",
       "tags": [
         "Evaluator/测试标准"
@@ -937,6 +971,7 @@
       "number": 36,
       "title": "HELIX: Model-Harness Co-evolution for Recursive Self-Improvement",
       "id": "2608.13951",
+      "institutions": "University of Hong Kong",
       "level": "L1",
       "tags": [
         "Executor/Harness/整体 Harness"
@@ -962,6 +997,7 @@
       "number": 37,
       "title": "AREX: Towards a Recursively Self-Improving Agent for Deep Research",
       "id": "2607.21461",
+      "institutions": "Beijing Academy of Artificial Intelligence",
       "level": "相邻研究（非完整 RSI）",
       "tags": [],
       "reason": "正文 §2 的内外循环围绕同一查询反复检索、压缩当前上下文、修订答案或重启；§3–4 的中期训练与 RL 用于构建该研究模型。未展示执行经验写成跨任务复用的 Skill/Memory、Harness 自修改或后继模型再启动同一改进过程。当前答案、临时研究状态和任务内置信度变化不计进化组件，保留为相邻研究。",
@@ -985,6 +1021,7 @@
       "number": 38,
       "title": "MetaSkill-Evolve: Recursive Self-Improvement of LLM Agents via Two-Timescale Meta-Skill Evolution ⭐ Spotlight",
       "id": "2607.05297",
+      "institutions": "LMU Munich, Chinese University of Hong Kong, MCML, MemAgents Lab",
       "level": "L2",
       "tags": [
         "Executor/Harness/Skill",
@@ -1012,6 +1049,7 @@
       "number": 39,
       "title": "The Red Queen Gödel Machine: Co-Evolving Agents and Their Evaluators ⭐ Spotlight",
       "id": "2606.26294",
+      "institutions": "University of Cambridge, NVIDIA, Flower Labs, MBZUAI, INRIA",
       "level": "L2",
       "tags": [
         "Executor/Harness/整体 Harness",
@@ -1042,6 +1080,7 @@
       "number": 1,
       "title": "GEPA-Curator: Curated Learning for Self Improving Agents",
       "id": "2610.37651",
+      "institutions": "University of California, Berkeley, International Computer Science Institute, Lawrence Berkeley National Laboratory, Furiosa AI, KAIST",
       "level": "L1",
       "tags": [
         "Executor/Harness/Prompt"
@@ -1067,6 +1106,7 @@
       "number": 2,
       "title": "When the Critic Falls Behind: Co-Evolving Rubrics and Harnesses for Continual Agent Self-Improvement",
       "id": "2610.36826",
+      "institutions": "Harbin Institute of Technology, Tsinghua University",
       "level": "L2",
       "tags": [
         "Executor/Harness/整体 Harness",
@@ -1094,6 +1134,7 @@
       "number": 3,
       "title": "Harness Self-Evolution for Long-Horizon Terminal Agents",
       "id": "2610.27435",
+      "institutions": "Tencent, Indiana University, University of Maryland, College Park, University of Georgia, National University of Singapore",
       "level": "L1",
       "tags": [
         "Executor/Harness/整体 Harness"
@@ -1119,6 +1160,7 @@
       "number": 4,
       "title": "Self-Evolving Coding Agents via Harness-Policy Optimization",
       "id": "2610.22791",
+      "institutions": "Microsoft Research, University of Virginia, Carnegie Mellon University",
       "level": "L2",
       "tags": [
         "Executor/Harness/整体 Harness",
@@ -1150,6 +1192,7 @@
       "number": 5,
       "title": "MemScope: Evolving Agent Memory Architectures through Localized Code Repair",
       "id": "2610.21170",
+      "institutions": "State Key Laboratory of AI Safety, Institute of Computing Technology, Chinese Academy of Sciences, University of Chinese Academy of Sciences, Meituan",
       "level": "L1",
       "tags": [
         "Executor/Harness/Memory"
@@ -1175,6 +1218,7 @@
       "number": 6,
       "title": "Harmony Harness: Multi-Objective Self-Evolution of Agent Harnesses",
       "id": "2610.15150",
+      "institutions": "Google Cloud AI Research, Carnegie Mellon University, Google DeepMind",
       "level": "L1",
       "tags": [
         "Executor/Harness/整体 Harness"
@@ -1200,6 +1244,7 @@
       "number": 7,
       "title": "ClawLoop: Self-Improving Agents via Harness-Native Training Loop ⭐ Spotlight",
       "id": "2610.14118",
+      "institutions": "Meituan, Peking University",
       "level": "L2",
       "tags": [
         "Executor/Model/Weights",
@@ -1229,6 +1274,7 @@
       "number": 8,
       "title": "Evo$^2$: Evolving the Evolver through Weight-Harness Co-Evolution ⭐ Spotlight",
       "id": "2610.13025",
+      "institutions": "Google DeepMind, University of Illinois Urbana-Champaign",
       "level": "L2",
       "tags": [
         "Executor/Harness/整体 Harness",
@@ -1258,6 +1304,7 @@
       "number": 9,
       "title": "Skill-V: Verifiable Self-Evolving Skill Library for Interactive Agents",
       "id": "2610.11781",
+      "institutions": "Xiamen University, Kuaishou Technology, Nankai University",
       "level": "L1",
       "tags": [
         "Executor/Harness/Skill"
@@ -1283,6 +1330,7 @@
       "number": 10,
       "title": "Who Verifies the Verifier? Co-Evolving Inspectable Graders with Self-Improving Agents",
       "id": "2610.11464",
+      "institutions": "Amazon Web Services",
       "level": "L2",
       "tags": [
         "Executor/Harness/Skill",
@@ -1310,6 +1358,7 @@
       "number": 11,
       "title": "VERSE: Verified Self-Evolving Optimizer for Agent Harnesses ⭐ Spotlight",
       "id": "2610.02616",
+      "institutions": "Massachusetts Institute of Technology, Amazon",
       "level": "L2",
       "tags": [
         "Executor/Harness/整体 Harness",
@@ -1337,6 +1386,7 @@
       "number": 12,
       "title": "False Frontiers: Diagnosing and Mitigating Co-Cheating in Self-Evolving Search Agents ⭐ Spotlight",
       "id": "2609.39102",
+      "institutions": "Rutgers University, Columbia University, University of California, San Diego, University of Michigan, McGill University, King Fahd University of Petroleum and Minerals",
       "level": "L2",
       "tags": [
         "Executor/Model/Weights",
@@ -1364,6 +1414,7 @@
       "number": 13,
       "title": "SAGE: A Statistical Acceptance Gate for Self-Evolving Agents ⭐ Spotlight",
       "id": "2609.36043",
+      "institutions": "Peking University, University of Oklahoma, Imperial College London, University of Michigan, Tencent, University of Edinburgh, Xunce Technology, GienTech Technology",
       "level": "L1",
       "tags": [
         "Executor/Harness/Skill"
@@ -1389,6 +1440,7 @@
       "number": 14,
       "title": "The Right Lesson at the Right Step: Deriving Control Updates for Self-Evolving Agents",
       "id": "2609.34988",
+      "institutions": "Sun Yat-sen University, Tsinghua University, Nankai University, University of Pennsylvania",
       "level": "L1",
       "tags": [
         "Executor/Harness/Prompt",
@@ -1418,6 +1470,7 @@
       "number": 15,
       "title": "Beyond Skill Evolution: Self-Evolving Context Management Policies for Long-Horizon Agent Harnesses",
       "id": "2609.34649",
+      "institutions": "Fudan University",
       "level": "L1",
       "tags": [
         "Executor/Harness/整体 Harness"
@@ -1443,6 +1496,7 @@
       "number": 16,
       "title": "Predict Before You Modify: Learning Improvement Dynamics for Self-Evolving Agents",
       "id": "2610.13991",
+      "institutions": "University of Virginia, Microsoft Research, Tsinghua University",
       "level": "L2",
       "tags": [
         "Executor/Harness/整体 Harness",
@@ -1471,6 +1525,7 @@
       "number": 17,
       "title": "Certified Long-Horizon Code Agent Evolution via Validation-Gated Skill Optimization",
       "id": "2609.32990",
+      "institutions": "Purdue University, University of Washington, University of California, Davis, New York University, University of Cambridge, Microsoft",
       "level": "L1",
       "tags": [
         "Executor/Harness/Skill"
@@ -1496,6 +1551,7 @@
       "number": 18,
       "title": "SkillLift: Learning Dense Rubrics from Sparse Oracles for Efficient Skill Evolution",
       "id": "2609.15396",
+      "institutions": "Fudan University",
       "level": "L2",
       "tags": [
         "Executor/Harness/Skill",
@@ -1523,6 +1579,7 @@
       "number": 19,
       "title": "EvoRS: On-Policy Self-Evolution of Reward Systems for Open-Ended Reinforcement Learning",
       "id": "2609.12459",
+      "institutions": "Fudan University, Nankai University, Hello Group",
       "level": "L2",
       "tags": [
         "Executor/Model/Weights",
@@ -1550,6 +1607,7 @@
       "number": 20,
       "title": "Experience Funnel: A State-Policy Alternating Loop for Self-Evolving Agents",
       "id": "2609.08919",
+      "institutions": "Hong Kong Polytechnic University, Huawei",
       "level": "L1",
       "tags": [
         "Executor/Harness/整体 Harness",
@@ -1577,6 +1635,7 @@
       "number": 21,
       "title": "A Theory of Reliable Self-Evolution for Agent Harnesses",
       "id": "2609.08175",
+      "institutions": "University of Science and Technology of China, Hong Kong Generative AI Research & Development Center, Hong Kong University of Science and Technology, Hong Kong Baptist University",
       "level": "不适用（理论研究）",
       "tags": [
         "Executor/Harness/整体 Harness"
@@ -1602,6 +1661,7 @@
       "number": 22,
       "title": "ARISE-RL: Agentic Rubric-Grounded Iterative Self-Evolution with Reinforcement Learning",
       "id": "2609.01058",
+      "institutions": "Alibaba ATH Token Foundry, Hema, Alibaba Group",
       "level": "L2",
       "tags": [
         "Executor/Model/Weights",
@@ -1631,6 +1691,7 @@
       "number": 23,
       "title": "HarnessEvolve: Learning from Reference Trajectories for Reliable Agent Self-Evolution",
       "id": "2609.00829",
+      "institutions": "Huawei",
       "level": "L1",
       "tags": [
         "Executor/Harness/整体 Harness"
@@ -1656,6 +1717,7 @@
       "number": 24,
       "title": "WikiSkill: Compiling Agent Experience into Persistent Knowledge for Skill Evolution",
       "id": "2608.27454",
+      "institutions": "Google Research, Virginia Tech",
       "level": "L2",
       "tags": [
         "Executor/Harness/Skill",
@@ -1683,6 +1745,7 @@
       "number": 25,
       "title": "CAFE: Self-Improving Search Agents Need Co-Evolving Feedback",
       "id": "2608.24794",
+      "institutions": "Fudan University, Tencent",
       "level": "L2",
       "tags": [
         "Executor/Model/Weights",
@@ -1709,6 +1772,7 @@
       "number": 26,
       "title": "SPADE: Self-Play in Adaptive Synthetic Executable Environments",
       "id": "2608.19197",
+      "institutions": "University of Washington, Stanford University, Northeastern University, Carnegie Mellon University, Massachusetts Institute of Technology, National University of Singapore, Seoul National University, Stevens Institute of Technology, University of Chicago",
       "level": "L2",
       "tags": [
         "Executor/Model/Weights",
@@ -1738,6 +1802,7 @@
       "number": 27,
       "title": "Self-Evolving Skills via Surrogate-Guided Solve-and-Reproduce",
       "id": "2608.28638",
+      "institutions": "Cleer Science, University of Edinburgh, Tsinghua University",
       "level": "L1",
       "tags": [
         "Executor/Harness/Skill"
@@ -1763,6 +1828,7 @@
       "number": 28,
       "title": "Rethinking Self-Evolving Agents: Do We Still Need Prescribed Optimization Pipelines?",
       "id": "2608.09629",
+      "institutions": "Microsoft Research",
       "level": "L1",
       "tags": [
         "Executor/Harness/Skill"
@@ -1788,6 +1854,7 @@
       "number": 29,
       "title": "EvolveNet: Collaborative Harness Evolution for Agent Self-Improvement",
       "id": "2608.04968",
+      "institutions": "Hong Kong Baptist University, University of Science and Technology of China, Hong Kong University of Science and Technology",
       "level": "L1",
       "tags": [
         "Executor/Harness/整体 Harness"
@@ -1813,6 +1880,7 @@
       "number": 30,
       "title": "Self-Play Meets Skill Evolution: Self-Evolving Search Agents that Pose, Solve, and Remember",
       "id": "2607.29468",
+      "institutions": "University of Chinese Academy of Sciences, Chinese Academy of Sciences, Institute of Automation, Peking University, Mininglamp Technology, Tsinghua University, Qilu University of Technology (Shandong Academy of Sciences), Shandong Fundamental Research Center for Computer Science",
       "level": "L2",
       "tags": [
         "Executor/Harness/Skill",
@@ -1843,6 +1911,7 @@
       "number": 31,
       "title": "SkillMentor: LLM Agent Self-Evolution via Learning Blind-Spot Diagnosis ⭐ Spotlight",
       "id": "2607.27360",
+      "institutions": "Hong Kong Polytechnic University, Tencent, Soochow University",
       "level": "L2",
       "tags": [
         "Executor/Harness/Skill",
@@ -1871,6 +1940,7 @@
       "number": 32,
       "title": "SERPO: Self-Evolving Rubric Policy Optimization for Open-Ended Test-Time Reinforcement Learning",
       "id": "2607.26873",
+      "institutions": "Huazhong University of Science and Technology, University of Science and Technology of China, Alibaba Group",
       "level": "L2",
       "tags": [
         "Executor/Model/Weights",
@@ -1898,6 +1968,7 @@
       "number": 33,
       "title": "Self-Authored Verification Is Unreliable in Heuristic Self-Improving Agents ⭐ Spotlight",
       "id": "2607.24300",
+      "institutions": "Institute of Information Engineering, Chinese Academy of Sciences, University of Chinese Academy of Sciences",
       "level": "L2",
       "tags": [
         "Executor/Harness/整体 Harness",
@@ -1925,6 +1996,7 @@
       "number": 34,
       "title": "Skill Self-Play: Pushing the Frontier of LLM Capability with Co-Evolving Skills",
       "id": "2607.22529",
+      "institutions": "Alibaba, Chinese University of Hong Kong, Renmin University of China, Sun Yat-sen University, Peking University, ETH Zürich, University of Zurich, University at Buffalo",
       "level": "L2",
       "tags": [
         "Executor/Model/Weights",
@@ -1954,6 +2026,7 @@
       "number": 35,
       "title": "Recursive Harness Self-Improvement",
       "id": "2607.15524",
+      "institutions": "Sakana AI, University of California, Berkeley",
       "level": "L1",
       "tags": [
         "Executor/Harness/Workflow"
@@ -1979,6 +2052,7 @@
       "number": 36,
       "title": "Harness-Aware Self-Evolving: Co-Evolving Model Weights, Harness, and Task Solutions",
       "id": "2607.03935",
+      "institutions": "University of Hong Kong, Jiutian Research, China Mobile, Grace Investment Machine",
       "level": "L2",
       "tags": [
         "Executor/Harness/整体 Harness",
@@ -2010,6 +2084,7 @@
       "number": 37,
       "title": "SkillCoach: Self-Evolving Rubrics for Evaluating and Enhancing Agentic Skill-Use",
       "id": "2607.01874",
+      "institutions": "HKUST(GZ), Jingdong, Institute of Deep Perception Technology, JITRI",
       "level": "相邻研究（非完整 RSI）",
       "tags": [
         "Evaluator/测试标准"
@@ -2035,6 +2110,7 @@
       "number": 38,
       "title": "OPD-Evolver: Cultivating Holistic Agent Evolver via On-Policy Distillation ⭐ Spotlight",
       "id": "2606.17628",
+      "institutions": "Fudan University, Peking University, Bytedance",
       "level": "L2",
       "tags": [
         "Executor/Harness/Skill",
@@ -2067,6 +2143,7 @@
       "number": 39,
       "title": "OpenSkill: Open-World Self-Evolution for LLM Agents",
       "id": "2606.06741",
+      "institutions": "Lehigh University, University of Illinois Chicago, University of British Columbia, Vector Institute, Salesforce AI Research, Massachusetts General Hospital, Harvard Medical School",
       "level": "L1",
       "tags": [
         "Executor/Harness/Skill"
@@ -2092,6 +2169,7 @@
       "number": 40,
       "title": "Adaptive Auto-Harness: Sustained Self-Improvement for Agentic System Deployment on Open-Ended Task Streams",
       "id": "2606.01770",
+      "institutions": "Emory University, Amazon",
       "level": "L1",
       "tags": [
         "Executor/Harness/整体 Harness"
@@ -2117,6 +2195,7 @@
       "number": 41,
       "title": "SkillSmith: Co-Evolving Skills and Tools for Self-Improving Agent Systems",
       "id": "2606.01314",
+      "institutions": "Shanghai Jiao Tong University, Eastern Institute of Technology, University of Science and Technology of China, Southeast University, Ningbo Institute of Digital Twin",
       "level": "L2",
       "tags": [
         "Executor/Harness/整体 Harness",
@@ -2148,6 +2227,7 @@
       "number": 42,
       "title": "SIA: Self Improving AI with Harness & Weight Updates",
       "id": "2605.27276",
+      "institutions": "Hexo Labs, University of Oxford",
       "level": "L1",
       "tags": [
         "Executor/Harness/整体 Harness",
@@ -2175,6 +2255,7 @@
       "number": 43,
       "title": "SEAL: Synergistic Co-Evolution of Agents and Learning Environments",
       "id": "2605.24426",
+      "institutions": "Ant Group, Westlake University, University of Michigan, University of Science and Technology of China",
       "level": "L2",
       "tags": [
         "Executor/Model/Weights",
@@ -2202,6 +2283,7 @@
       "number": 44,
       "title": "Learning to Build the Environment: Self-Evolving Reasoning RL via Verifiable Environment Synthesis ⭐ Spotlight",
       "id": "2605.14392",
+      "institutions": "Tencent HY LLM",
       "level": "L2",
       "tags": [
         "Executor/Model/Weights",
@@ -2231,6 +2313,7 @@
       "number": 45,
       "title": "EvolveMem:Self-Evolving Memory Architecture via AutoResearch for LLM Agents",
       "id": "2605.13941",
+      "institutions": "UNC-Chapel Hill, University of California, Berkeley, University of California, Santa Cruz",
       "level": "L1",
       "tags": [
         "Executor/Harness/Memory"
@@ -2256,6 +2339,7 @@
       "number": 46,
       "title": "SkillOS: Learning Skill Curation for Self-Evolving Agents ⭐ Spotlight",
       "id": "2605.06614",
+      "institutions": "University of Illinois Urbana-Champaign, Google Cloud AI Research, Massachusetts Institute of Technology",
       "level": "L2",
       "tags": [
         "Executor/Harness/Skill",
@@ -2284,6 +2368,7 @@
       "number": 47,
       "title": "Agentic Harness Engineering: Observability-Driven Automatic Evolution of Coding-Agent Harnesses",
       "id": "2604.25850",
+      "institutions": "Fudan University, Peking University, Shanghai Qiji Zhifeng Co., Ltd",
       "level": "L1",
       "tags": [
         "Executor/Harness/整体 Harness"
@@ -2309,6 +2394,7 @@
       "number": 48,
       "title": "Learning to Evolve: A Self-Improving Framework for Multi-Agent Systems via Textual Parameter Graph Optimization",
       "id": "2604.20714",
+      "institutions": "Alibaba",
       "level": "L2",
       "tags": [
         "Executor/Harness/Prompt",
@@ -2338,6 +2424,7 @@
       "number": 49,
       "title": "Agent-World: Scaling Real-World Environment Synthesis for Evolving General Agent Intelligence",
       "id": "2604.18292",
+      "institutions": "Renmin University of China, Bytedance",
       "level": "L2",
       "tags": [
         "Executor/Model/Weights",
@@ -2366,6 +2453,7 @@
       "number": 50,
       "title": "Autogenesis: A Self-Evolving Agent Protocol",
       "id": "2604.15034",
+      "institutions": "Nanyang Technological University, Stanford University, City University of Hong Kong, University of Science and Technology of China",
       "level": "L1",
       "tags": [
         "Executor/Harness/整体 Harness"
@@ -2391,6 +2479,7 @@
       "number": 51,
       "title": "CoEvoSkills: Self-Evolving Agent Skills via Co-Evolutionary Verification ⭐ Spotlight",
       "id": "2604.01687",
+      "institutions": "University of Illinois Chicago, University of British Columbia",
       "level": "L2",
       "tags": [
         "Executor/Harness/Skill",
@@ -2418,6 +2507,7 @@
       "number": 52,
       "title": "Hyperagents ⭐ Spotlight",
       "id": "2603.19461",
+      "institutions": "University of British Columbia, Vector Institute, University of Edinburgh, New York University, Meta Fundamental AI Research, Meta Superintelligence Labs",
       "level": "L2",
       "tags": [
         "Executor/Harness/整体 Harness",
@@ -2445,6 +2535,7 @@
       "number": 53,
       "title": "Reinforcing Chain-of-Thought Reasoning with Self-Evolving Rubrics",
       "id": "2602.10885",
+      "institutions": "ByteDance, National University of Singapore, University of Science and Technology of China, Seed",
       "level": "L2",
       "tags": [
         "Executor/Model/Weights",
@@ -2472,6 +2563,7 @@
       "number": 54,
       "title": "Dr. Zero: Self-Evolving Search Agents without Training Data",
       "id": "2601.07055",
+      "institutions": "Meta Superintelligence Labs",
       "level": "L2",
       "tags": [
         "Executor/Model/Weights",
@@ -2499,6 +2591,7 @@
       "number": 55,
       "title": "AgentDevel: Reframing Self-Evolving LLM Agents as Release Engineering",
       "id": "2601.04620",
+      "institutions": "Fudan University",
       "level": "L1",
       "tags": [
         "Executor/Harness/整体 Harness"
@@ -2524,6 +2617,7 @@
       "number": 56,
       "title": "MemRL: Self-Evolving Agents via Runtime Reinforcement Learning on Episodic Memory",
       "id": "2601.03192",
+      "institutions": "Shanghai Jiao Tong University, Xidian University, National University of Singapore, Shanghai Innovation Institute, MemTensor (Shanghai) Technology Co., Ltd., University of Science and Technology of China",
       "level": "L1",
       "tags": [
         "Executor/Harness/Memory"

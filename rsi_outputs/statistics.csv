@@ -2,11 +2,11 @@
 模块,Executor,35,55,90,0.9474
 模块,Evaluator,6,20,26,0.2737
 模块,Improver,15,21,36,0.3789
-组件,Executor/Harness/整体 Harness,14,21,35,0.3684
+组件,Executor/Harness/整体 Harness,15,21,36,0.3789
 组件,Executor/Harness/Prompt,4,3,7,0.0737
 组件,Executor/Harness/Skill,7,16,23,0.2421
-组件,Executor/Harness/Memory,5,4,9,0.0947
-组件,Executor/Harness/Workflow,5,3,8,0.0842
+组件,Executor/Harness/Memory,4,4,8,0.0842
+组件,Executor/Harness/Workflow,4,3,7,0.0737
 组件,Executor/Model/Weights,14,19,33,0.3474
 组件,Executor/Model/模型结构,0,0,0,0.0000
 组件,Evaluator/测试任务,1,4,5,0.0526
