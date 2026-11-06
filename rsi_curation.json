@@ -3,7 +3,7 @@
   "scope": "排除综述/路线图、专门垂类应用、benchmark 及单纯比较/实证分析。保留提出通用 Agent/Harness、代码与模型研发方法的论文；方法论文不因使用多个 benchmark 做实验而排除。理论论文若提出新判定方法并实际检验可保留。",
   "before_total": 124,
   "removed_total": 29,
-  "after_total": 102,
+  "after_total": 105,
   "excluded": [
     {
       "id": "2610.40191",
@@ -299,8 +299,8 @@
   ],
   "spotlight_limit": 20,
   "spotlight_limit_basis": "用户明确以最多20篇替代原来的10%限制。",
-  "latest_backup": "rsi_outputs/before_add_20261106",
-  "added_total": 7,
+  "latest_backup": "rsi_outputs/before_add_20261106_to_105",
+  "added_total": 10,
   "additions": [
     {
       "id": "2605.23904",
@@ -350,6 +350,27 @@
       "group": "拓展",
       "source": "https://arxiv.org/html/2611.01840#S3.SS2",
       "why": "腾讯与香港城大的近期工作流方法，将反馈驱动的任务分解与可执行程序修订结合。"
+    },
+    {
+      "id": "2611.01736",
+      "title": "RSI-Env: An Open-Ended Environment for Recursive Self-Improvement of Agents",
+      "group": "核心",
+      "source": "https://arxiv.org/html/2611.01736#S4.SS5",
+      "why": "后继模型—Harness 系统实际接手后续改进，提供模型与执行框架共同更新的递归连续性实例。"
+    },
+    {
+      "id": "2611.04035",
+      "title": "Recursa: Toward Recursively Self-Improving Foundation Model Systems",
+      "group": "核心",
+      "source": "https://arxiv.org/html/2611.04035#S5",
+      "why": "阿里研究院的新作，同一模型分别承担 Solver 与 Learner，通过知识库更新和学习反思改进后续任务与编辑过程。"
+    },
+    {
+      "id": "2611.03698",
+      "title": "Training LLM Agents to Automate LLM Post-Training with RSI-Dojo",
+      "group": "核心",
+      "source": "https://arxiv.org/html/2611.03698#S3.SS3",
+      "why": "字节与港中文等将自动后训练能力直接训练进研发 Agent，并验证其改进目标小模型的能力。"
     }
   ],
   "exceptions": [

@@ -1,15 +1,15 @@
 ﻿统计维度,类别,核心,拓展,合并去重,占全部条目
-模块,Executor,37,59,96,0.9412
-模块,Evaluator,7,20,27,0.2647
-模块,Improver,17,22,39,0.3824
-组件,Executor/Harness/整体 Harness,16,22,38,0.3725
-组件,Executor/Harness/Prompt,4,3,7,0.0686
-组件,Executor/Harness/Skill,8,18,26,0.2549
-组件,Executor/Harness/Memory,4,4,8,0.0784
-组件,Executor/Harness/Workflow,4,4,8,0.0784
-组件,Executor/Model/Weights,14,19,33,0.3235
+模块,Executor,40,59,99,0.9429
+模块,Evaluator,7,20,27,0.2571
+模块,Improver,20,22,42,0.4000
+组件,Executor/Harness/整体 Harness,17,22,39,0.3714
+组件,Executor/Harness/Prompt,5,3,8,0.0762
+组件,Executor/Harness/Skill,9,18,27,0.2571
+组件,Executor/Harness/Memory,4,4,8,0.0762
+组件,Executor/Harness/Workflow,4,4,8,0.0762
+组件,Executor/Model/Weights,16,19,35,0.3333
 组件,Executor/Model/模型结构,0,0,0,0.0000
-组件,Evaluator/测试任务,2,4,6,0.0588
-组件,Evaluator/测试标准,6,18,24,0.2353
-组件,Improver/提出策略,16,22,38,0.3725
-组件,Improver/筛选策略,3,4,7,0.0686
+组件,Evaluator/测试任务,2,4,6,0.0571
+组件,Evaluator/测试标准,6,18,24,0.2286
+组件,Improver/提出策略,19,22,41,0.3905
+组件,Improver/筛选策略,4,4,8,0.0762

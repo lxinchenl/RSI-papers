@@ -100,6 +100,48 @@
       "note": "SeaFlow 是代码项目名，正文标题未使用该缩写；网页另设可搜索别名。方法是反馈驱动的通用工作流构建，实验采用 GLEE 三类交互游戏。",
       "why": "腾讯与香港城大的近期工作流方法，将反馈驱动的任务分解与可执行程序修订结合。",
       "abstract": "该工作以语义任务分解构建智能体工作流，每个子任务明确何时适用，以及通过代码还是模型调用求解。执行工作流在一次交互中保持固定；交互结束后，编码智能体读取执行记录和结果，进一步拆分、合并子任务，或修改条件及求解程序，再部署新版本。论文以 GLEE 的讨价还价、谈判和劝说任务分析开发轨迹，展示策略如何加入、修订或移除，以及可直接编码的步骤如何减少反复调用模型。开放代码项目名为 SeaFlow。"
+    },
+    {
+      "id": "2611.01736",
+      "title": "RSI-Env: An Open-Ended Environment for Recursive Self-Improvement of Agents",
+      "group": "核心",
+      "date": "2026-11-01",
+      "institutions": "Fudan University, Shanghai Artificial Intelligence Laboratory, The Hong Kong University of Science and Technology, Georgia Institute of Technology, Nanjing University, Shanghai Innovation Institute",
+      "level": "L2",
+      "tags": ["Executor/Harness/整体 Harness", "Executor/Model/Weights", "Improver/提出策略"],
+      "reason": "§3.1–3.2、§4.5 与附录 A 中，Self 配置让更新后的模型—Harness 系统接手下一轮研发：执行侧 Harness 和模型权重确有更新，同一后继系统还提出后续实验与修改，因此改进机制也继承更新。Knowledge Self 的 H0/M0→H1/M0→H1/M1 给出连续实例。Host 的有效性/可执行性登记规则与独立能力评测受保护，不标筛选策略或 Evaluator 进化；固定外部 Teacher 配置不据此获得 Improver 更新标签。",
+      "source": "https://arxiv.org/html/2611.01736#S4.SS5",
+      "note": "核查 §3、§4.1–4.5 和附录 A，按实际 Self 配置分类。候选登记并不要求能力分数提高；局部实验数据变化也不自动视为诊断题生成机制进化。该文提出可执行研发环境与后继接手机制，非仅静态 benchmark 或比较分析。",
+      "why": "后继模型—Harness 系统实际接手后续改进，提供模型与执行框架共同更新的递归连续性实例。",
+      "abstract": "RSI-Env 为智能体提供持久研发环境，允许检查系统、构建训练数据、选择训练方法及修改 Harness，并跨轮保存实验记录。独立 Host Controller 管理训练服务、候选有效性、版本与能力评测。在 Self 配置下，每个登记的后继模型—Harness 组合接手下一轮研究；Teacher 配置则使用固定外部改进器。三种设置分别提供开放目标、能力方向或具体基准反馈。论文展示连续更新的案例：知识任务中先修改 Harness，再由更新后的系统构造数据训练模型，同时指出目标能力提高可能伴随其他能力退步。"
+    },
+    {
+      "id": "2611.04035",
+      "title": "Recursa: Toward Recursively Self-Improving Foundation Model Systems",
+      "group": "核心",
+      "date": "2026-11-02",
+      "institutions": "Alibaba Research",
+      "level": "L2",
+      "tags": ["Executor/Harness/Prompt", "Executor/Harness/Skill", "Improver/提出策略"],
+      "reason": "§2.2 与 §5 明确只学习知识库：Solver 的 instructions 和 Skill 持续修改，模型及底层 Harness 固定。Learner 把学习轨迹与失败诊断的反思保存并在后续编辑时读取，构成可继承的改进指导，归 Improver/提出策略。§3 明确这类反思 Memory 装入 Learner 上下文，不据此标 Executor/Memory。固定的修复且不回退验收门不算筛选策略更新；§6.1 与附录 B 的研究者 Rubric 修订不当作循环内 Evaluator 自进化。",
+      "source": "https://arxiv.org/html/2611.04035#S5",
+      "note": "核查 §2.1–2.2、§3、§5、§6.1：不把文中未来的模型/Harness 学习愿景计为已实现更新。通用知识库学习方法采用企业法律材料做实验，不按专门法律应用扩大垂类范围；正文没有把 Learner 反思直接部署给 Solver。",
+      "why": "阿里研究院的新作，同一模型分别承担 Solver 与 Learner，通过知识库更新和学习反思改进后续任务与编辑过程。",
+      "abstract": "Recursa 用知识库帮助基础模型适应新领域。系统先阅读领域材料、建立导航并自练习，再让 Solver 执行任务，Learner 根据反馈和轨迹修订指令与技能。学习任务可以拆给多个子 Learner，并行尝试后验证、合并局部改动；父 Learner 阅读子学习轨迹，将反思保存下来，指导下一轮学习。本文实际更新的是知识库，模型权重和底层 Harness 保持固定。实验采用 Harvey LAB 的企业知识任务，并在留出任务上检验改进。Learner 的学习反思与 Solver 使用的任务技能具有不同功能角色。"
+    },
+    {
+      "id": "2611.03698",
+      "title": "Training LLM Agents to Automate LLM Post-Training with RSI-Dojo",
+      "group": "核心",
+      "date": "2026-10-29",
+      "institutions": "The Chinese University of Hong Kong, ByteDance, Tsinghua University, Shanghai Jiao Tong University",
+      "level": "L2",
+      "tags": ["Executor/Model/Weights", "Improver/提出策略", "Improver/筛选策略"],
+      "reason": "§3.2–3.3 用模型研发轨迹微调后训练 Agent，使其数据构建、训练方案和错误诊断能力内化为可复用提出策略；§5.3 展示学到的数据来源选择及训练子集筛选，归数据策展层面的筛选策略。执行侧 Weights 指该 Agent 在内层任务中实际后训练的目标小模型；研发 Agent 自身的 SFT 更新归 Improver。RSI-Craft 构建流程、轨迹过滤器及正式评测固定，不标动态 Evaluator。§7 明确尚未闭合训练自身后继的循环；L2 仅表示组件层级。",
+      "source": "https://arxiv.org/html/2611.03698#S3.SS3",
+      "note": "核查 §3、§4.3、§5.3 与 §7：筛选标签依据受训研发策略的数据策展行为，不依据人工设定的轨迹过滤门。§7 明确尚未用受训模型训练其自身后继；L2 表示本库的组件层级，不等于已闭合完整 RSI。首次提交按 arXiv 记录为 2026-10-29。",
+      "why": "字节与港中文等将自动后训练能力直接训练进研发 Agent，并验证其改进目标小模型的能力。",
+      "abstract": "RSI-Dojo 面向自动开展模型后训练的智能体。RSI-Craft 从论文和已有评测平台恢复数据、指标与依赖，筛出 281 个可执行训练环境。前沿模型在带指导的 Harness 中完成研发任务，轨迹经过过程质量和目标模型改进结果的双重过滤，再用于微调 Qwen 系列研发 Agent。受训 Agent 随后在 PostTrainBench 中构建数据、配置训练、分析失败并迭代目标小模型。这里既有内层目标模型更新，也有外层研发能力学习；论文明确尚未验证由受训模型训练其自身后继的完整递归闭环。"
     }
   ]
 }

@@ -4,7 +4,7 @@
 
 **[打开交互网页](https://lxinchenl.github.io/RSI-papers/)**
 
-- 核心版 42 篇、拓展版 60 篇，共 102 个不同 arXiv ID。
+- 核心版 45 篇、拓展版 60 篇，共 105 个不同 arXiv ID。
 - 核心：题目或摘要提到 RSI 的论文；拓展：由我们人为判断与 RSI 相关的论文。
 - 按 Executor、Evaluator、Improver 及具体更新组件浏览。
 - 每篇论文显示贡献机构；已核实的方法名另行标注，支持标题、方法简称及机构名称搜索。
