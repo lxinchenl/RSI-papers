@@ -8,7 +8,7 @@
   "tagged": 103,
   "method_levels": 100,
   "semantic_changes": 25,
-  "body_review": 37,
+  "body_review": 39,
   "module_counts": {
     "Executor": 99,
     "Evaluator": 27,

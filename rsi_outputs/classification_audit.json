@@ -1,5 +1,5 @@
 {
-  "date": "2026-11-06",
+  "date": "2026-11-07",
   "count": 105,
   "papers": [
     {
@@ -593,12 +593,12 @@
         "Evaluator/测试任务",
         "Improver/提出策略"
       ],
-      "reason": "各分支迭代 Harness、用于选优的开发任务子集，以及写入 SKILL.md 的提案指导；保留最终分支头的规则固定。",
-      "status": "本轮复核本地摘要与既有正文核查记录；未重新读取正文",
+      "reason": "各分支从已有开发题中维护不同子集，用各自子集的平均得分比较候选 Harness。系统依据领先 Harness 的解题表现定期刷新子集，让分支聚焦不同任务。这是用于候选比较的测评题集更新，外部测试集固定。Harness 与写入 SKILL.md 的提案指导也跨轮更新；分支内保留高分版本的规则固定。",
+      "status": "按正文相关段落复核（本对话）；本轮按统一功能分类重标",
       "is_addition": false,
-      "source": "",
-      "review_note": "沿用本地摘要及既有依据，统一功能角色与标签层级。",
-      "review_scope": "本地摘要与既有依据",
+      "source": "https://arxiv.org/html/2609.37834#S3",
+      "review_note": "正文确认更新的是候选 Harness 的开发测评题集，题目来自已有开发集。",
+      "review_scope": "正文相关段落（本对话）",
       "before": {
         "level": "L2",
         "tags": [
@@ -1154,7 +1154,7 @@
         "Executor/Harness/整体 Harness",
         "Improver/提出策略"
       ],
-      "reason": "§2.2 与 §3.4–3.5 明确冻结骨干，Explorer 跨轮继承、修订执行 Harness 模块；Creator 的环境构建 Harness 也根据验证失败修订，并汇入下一轮 Base Harness，因此训练环境提出机制更新。原任务评分规则、世界准入阈值、继承比较门和合并规则固定，不标筛选策略或测试标准进化；生成世界主要用于能力学习，不自动标诊断测试任务。",
+      "reason": "冻结骨干后，Explorer 跨轮继承、修订执行 Harness；Creator 的环境构建 Harness 也根据验证失败修订，并汇入下一轮 Base Harness，更新训练环境的提出机制。新关卡按已定义的能力要求构造，用于练习和改进 Harness，随后在同一关卡复测。独立基准及评分规则固定，因此测试任务和测试标准没有更新证据。世界准入、继承比较与合并规则固定。",
       "status": "按正文相关段落复核（本对话）；本轮按统一功能分类重标",
       "is_addition": true,
       "source": "https://arxiv.org/html/2610.36077#S3.SS5",
@@ -1392,12 +1392,12 @@
         "Evaluator/测试任务",
         "Improver/提出策略"
       ],
-      "reason": "当前策略继续提出 Harness 改动；难题形成下一轮搜索集，策略权重和 Harness 均更新。",
-      "status": "本轮复核本地摘要与既有正文核查记录；未重新读取正文",
+      "reason": "每轮 RL 更新执行策略，并将训练中所有 rollout 均未解决的题选入下一轮搜索集。搜索时冻结策略，用这批题对现有和候选 Harness 打分并选出最高分版本，同时用失败轨迹指导提案。跨轮更新的候选比较题集归测试任务；Harness、执行权重及复用更新后策略的提案功能也随轮次更新。",
+      "status": "按正文相关段落复核（本对话）；本轮按统一功能分类重标",
       "is_addition": false,
-      "source": "",
-      "review_note": "沿用本地摘要及既有依据，统一功能角色与标签层级。",
-      "review_scope": "本地摘要与既有依据",
+      "source": "https://arxiv.org/html/2610.22791#S2.SS2",
+      "review_note": "算法 1 明确对所有候选 Harness 在同一轮的搜索集上打分，搜索集与 RL 训练集承担不同用途。",
+      "review_scope": "正文相关段落（本对话）",
       "before": {
         "level": "L2",
         "tags": [
