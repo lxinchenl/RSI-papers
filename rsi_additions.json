@@ -1,6 +1,21 @@
 {
-  "date": "2026-11-06",
+  "date": "2026-11-09",
   "papers": [
+    {
+      "id": "2603.28052",
+      "title": "Meta-Harness: End-to-End Optimization of Model Harnesses",
+      "group": "拓展",
+      "date": "2026-03-30",
+      "reviewed_date": "2026-11-09",
+      "institutions": "Stanford University, KRAFTON, Massachusetts Institute of Technology",
+      "level": "L1",
+      "tags": ["Executor/Harness/整体 Harness"],
+      "reason": "§3 与 §4.3 在冻结模型的条件下迭代改写任务执行 Harness，覆盖上下文构建、检索、工具和执行控制代码。提议者读取不断积累的历史代码、分数与轨迹，但未展示其可复用提出规则或筛选规则自身被改写；搜索任务与评价协议固定。因此标执行器整体 Harness，不因名称中的 Meta 或历史反馈直接标 Improver。",
+      "source": "https://arxiv.org/html/2603.28052#S3",
+      "note": "核查作者机构、摘要、§3 算法与 §4.3。题目和摘要未直接提及 RSI，按文库定义收入拓展版。父代选择交给提议者自主判断不等于筛选策略发生可继承的更新。",
+      "why": "通过文件系统保留并按需检索完整执行历史，支持跨多个组件的可执行 Harness 优化，并检验跨任务、跨模型迁移。",
+      "abstract": "Meta-Harness 是一个自动搜索任务执行 Harness 代码的外层系统。编码智能体可通过文件系统读取所有历史候选的源代码、评分和完整执行轨迹，按需定位失败原因，提出局部编辑或整体重写。新候选经过接口校验和搜索集评估后，代码与反馈继续写入历史，供下一轮改进使用，最终依据搜索集表现选择候选并在留出测试集评测。目标模型权重冻结，可编辑内容包括提示构建、检索、状态管理和工具编排。论文在在线文本分类、检索增强数学推理和智能体编码中验证该方法，展示完整轨迹反馈对 Harness 优化的作用及所得框架的迁移能力。"
+    },
     {
       "id": "2605.23904",
       "title": "SkillOpt: Executive Strategy for Self-Evolving Agent Skills",

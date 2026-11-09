@@ -1,9 +1,9 @@
 {
-  "date": "2026-11-06",
+  "date": "2026-11-09",
   "scope": "排除综述/路线图、专门垂类应用、benchmark 及单纯比较/实证分析。保留提出通用 Agent/Harness、代码与模型研发方法的论文；方法论文不因使用多个 benchmark 做实验而排除。理论论文若提出新判定方法并实际检验可保留。",
   "before_total": 124,
   "removed_total": 29,
-  "after_total": 105,
+  "after_total": 106,
   "excluded": [
     {
       "id": "2610.40191",
@@ -299,9 +299,16 @@
   ],
   "spotlight_limit": 20,
   "spotlight_limit_basis": "用户明确以最多20篇替代原来的10%限制。",
-  "latest_backup": "rsi_outputs/before_add_20261106_to_105",
-  "added_total": 10,
+  "latest_backup": "rsi_outputs/before_add_20261109_to_106",
+  "added_total": 11,
   "additions": [
+    {
+      "id": "2603.28052",
+      "title": "Meta-Harness: End-to-End Optimization of Model Harnesses",
+      "group": "拓展",
+      "source": "https://arxiv.org/html/2603.28052#S3",
+      "why": "通过文件系统保留并按需检索完整执行历史，支持跨多个组件的可执行 Harness 优化，并检验跨任务、跨模型迁移。"
+    },
     {
       "id": "2605.23904",
       "title": "SkillOpt: Executive Strategy for Self-Evolving Agent Skills",

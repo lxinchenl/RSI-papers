@@ -5,8 +5,8 @@
 | 来源 | 总数 | Spotlight | 比例 |
 | --- | --- | --- | --- |
 | 核心 | 45 | 8 | 17.78% |
-| 拓展 | 60 | 12 | 20.00% |
-| 合计 | 105 | 20 | 19.05% |
+| 拓展 | 61 | 12 | 19.67% |
+| 合计 | 106 | 20 | 18.87% |
 
 建议先读：Hyperagents → MetaSkill-Evolve → VERSE → Red Queen Gödel Machine → SkillOS → OPD-Evolver。
 

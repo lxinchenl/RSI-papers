@@ -1,21 +1,21 @@
 {
-  "total": 105,
-  "unique_ids": 105,
+  "total": 106,
+  "unique_ids": 106,
   "groups": {
     "核心": 45,
-    "拓展": 60
+    "拓展": 61
   },
-  "tagged": 103,
-  "method_levels": 100,
+  "tagged": 104,
+  "method_levels": 101,
   "semantic_changes": 25,
-  "body_review": 39,
+  "body_review": 40,
   "module_counts": {
-    "Executor": 99,
+    "Executor": 100,
     "Evaluator": 27,
     "Improver": 42
   },
   "tag_counts": {
-    "Executor/Harness/整体 Harness": 39,
+    "Executor/Harness/整体 Harness": 40,
     "Executor/Harness/Prompt": 8,
     "Executor/Harness/Skill": 27,
     "Executor/Harness/Memory": 8,
@@ -28,7 +28,7 @@
     "Improver/筛选策略": 8
   },
   "levels": {
-    "L1": 47,
+    "L1": 48,
     "L2": 53,
     "相邻研究（非完整 RSI）": 3,
     "相邻研究（诊断基准构建）": 1,
